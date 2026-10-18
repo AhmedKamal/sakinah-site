@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sakinah.jazary.com/sitemap.xml
