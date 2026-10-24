@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>سكينة – طمأنينة في بيتك | القرآن والأذان والأذكار على التلفاز والحاسوب</title>
-<meta name="description" content="سكينة رفيق إسلامي هادئ لتلفاز LG ومتصفحي Chrome وFirefox: القرآن بأصوات كبار القرّاء، الأذان في وقته ثم تعود التلاوة، أذكار الصباح والمساء بنصها وصوتها، الكهف يوم الجمعة، والحرمين مباشر. مجاني وبلا إعلانات.">
+<title>سكينة | القرآن والأذان والأذكار على التلفاز والمتصفح والجوال</title>
+<meta name="description" content="سكينة يشغّل القرآن بأصوات كبار القرّاء، ويرفع الأذان في وقته ثم يكمل التلاوة. ومعه أذكار الصباح والمساء، وسورة الكهف يوم الجمعة، والحرمين مباشر. مجاني وبلا إعلانات.">
 <link rel="canonical" href="https://sakinah.jazary.com/">
 <link rel="alternate" hreflang="ar" href="https://sakinah.jazary.com/">
 <link rel="alternate" hreflang="en" href="https://sakinah.jazary.com/en/">
@@ -12,8 +12,8 @@
 <link rel="apple-touch-icon" href="/assets/icon-128.png">
 <meta name="theme-color" content="#17120e">
 <meta property="og:type" content="website">
-<meta property="og:title" content="سكينة – طمأنينة في بيتك | القرآن والأذان والأذكار على التلفاز والحاسوب">
-<meta property="og:description" content="سكينة رفيق إسلامي هادئ لتلفاز LG ومتصفحي Chrome وFirefox: القرآن بأصوات كبار القرّاء، الأذان في وقته ثم تعود التلاوة، أذكار الصباح والمساء بنصها وصوتها، الكهف يوم الجمعة، والحرمين مباشر. مجاني وبلا إعلانات.">
+<meta property="og:title" content="سكينة | القرآن والأذان والأذكار على التلفاز والمتصفح والجوال">
+<meta property="og:description" content="سكينة يشغّل القرآن بأصوات كبار القرّاء، ويرفع الأذان في وقته ثم يكمل التلاوة. ومعه أذكار الصباح والمساء، وسورة الكهف يوم الجمعة، والحرمين مباشر. مجاني وبلا إعلانات.">
 <meta property="og:image" content="https://sakinah.jazary.com/assets/og.jpg">
 <meta property="og:url" content="https://sakinah.jazary.com/">
 <meta name="twitter:card" content="summary_large_image">
@@ -65,10 +65,19 @@ background: var(--terracotta); color: #fff; border: 1px solid transparent; }
 .btn svg { width: 20px; height: 20px; fill: currentColor; }
 .pills { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 22px; color: var(--muted); font-size: 15px; }
 .pills span::before { content: '✦'; color: var(--amber); margin-inline-end: 8px; font-size: 11px; vertical-align: 2px; }
-.tv { margin: -40px auto 0; position: relative; z-index: 2; width: min(1000px, 100% - 32px); }
+.devices { position: relative; z-index: 2; width: min(1000px, 100% - 32px); margin: -40px auto 0; }
 .tv .screen { border-radius: 14px; overflow: hidden; border: 10px solid #0d0a08; box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(242, 232, 213, 0.08); }
 .tv .stand { width: 26%; height: 14px; margin: 0 auto; background: linear-gradient(#0d0a08, #070504); border-radius: 0 0 10px 10px; }
-.caption { text-align: center; color: var(--faint); font-size: 14px; margin-top: 14px; }
+.devices .pop { position: absolute; inset-inline-start: -3%; bottom: -6%; width: 25%; border-radius: 14px; overflow: hidden;
+box-shadow: 0 30px 70px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(242, 232, 213, 0.12); }
+.devices .phone { position: absolute; inset-inline-end: -2%; bottom: -10%; width: 19%; border-radius: 30px; padding: 6px;
+background: #0d0a08; box-shadow: 0 30px 70px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(242, 232, 213, 0.16); }
+.devices .phone img { display: block; width: 100%; height: auto; border-radius: 24px; }
+.devices .phone span { position: absolute; top: -13px; inset-inline-start: 50%; transform: translateX(-50%); white-space: nowrap;
+padding: 4px 12px; border-radius: 99px; background: var(--terracotta); color: #fff7ea; font-size: 13px; font-weight: 600; }
+[dir="rtl"] .devices .phone span { transform: translateX(50%); }
+.caption { text-align: center; color: var(--faint); font-size: 14px; margin-top: 64px; padding: 0 16px; }
+@media (max-width: 700px) { .devices .pop { display: none; } .devices .phone { width: 24%; inset-inline-end: 3%; bottom: -18%; border-radius: 18px; padding: 4px; } .devices .phone img { border-radius: 14px; } .devices .phone span { font-size: 10px; padding: 2px 8px; top: -10px; } .caption { margin-top: 72px; } }
 section { padding: 96px 0 0; }
 .eyebrow { color: var(--amber); font-size: 15px; letter-spacing: 0.02em; }
 h2 { font: 700 clamp(38px, 5vw, 56px)/1.25 'Ruqaa', serif; color: var(--bright); margin: 4px 0 14px; }
@@ -92,13 +101,24 @@ html[dir="rtl"] .day div { padding: 22px 0 6px 18px; }
 .shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; margin-top: 36px; }
 .shots figure { border-radius: 14px; overflow: hidden; background: var(--panel); border: 1px solid var(--line); }
 .shots figcaption { padding: 12px 16px; color: var(--muted); font-size: 15px; }
-.laptop { display: grid; grid-template-columns: 1fr 380px; gap: 40px; align-items: center; margin-top: 30px; }
-@media (max-width: 820px) { .laptop { grid-template-columns: 1fr; } .laptop img { margin-inline: auto; } }
-.laptop img { border-radius: 16px; box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(242, 232, 213, 0.1); width: 380px; }
-.laptop ul { list-style: none; margin-top: 18px; }
-.laptop li { padding: 10px 0; border-bottom: 1px solid var(--line); color: var(--muted); }
-.laptop li b { color: var(--sand); font-weight: 600; }
-.promise { margin-top: 96px; padding: 44px; border-radius: 22px; background: var(--ink-2); border: 1px solid var(--line); display: grid; grid-template-columns: auto 1fr; gap: 28px; align-items: center; }
+.places { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 36px; }
+@media (max-width: 900px) { .places { grid-template-columns: 1fr; } }
+.place { padding: 28px; border-radius: 20px; background: var(--panel); border: 1px solid var(--line); display: flex; flex-direction: column; }
+.place .ic { width: 52px; height: 52px; border-radius: 14px; display: grid; place-items: center; background: rgba(200, 119, 74, 0.18); color: var(--amber); margin-bottom: 16px; }
+.place .ic svg { width: 28px; height: 28px; fill: currentColor; }
+.place h3 { font-size: 22px; font-weight: 600; color: var(--bright); margin-bottom: 6px; }
+.place p { color: var(--muted); font-size: 16px; flex: 1; }
+.place ul { list-style: none; margin-top: 20px; border-top: 1px solid var(--line); }
+.place li { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line); font-weight: 600; }
+.place li a { color: var(--bright); text-decoration-color: var(--amber); text-underline-offset: 4px; }
+.place li > a, .place li > span { display: inline-flex; align-items: center; gap: 10px; }
+.place .logo { width: 20px; height: 20px; fill: currentColor; flex: none; }
+.place .logo.samsung { width: 92px; height: 18px; }
+.place .logo.lg { width: 62px; height: 19px; }
+.place em { font-style: normal; font-weight: 400; font-size: 14px; color: var(--faint); text-align: end; }
+.place em.live { color: #9fd3a0; }
+.place em.review { color: var(--amber); }
+.promise { margin-top: 0; padding: 44px; border-radius: 22px; background: var(--ink-2); border: 1px solid var(--line); display: grid; grid-template-columns: auto 1fr; gap: 28px; align-items: center; }
 .promise .ic { width: 64px; height: 64px; border-radius: 18px; display: grid; place-items: center; background: rgba(200, 119, 74, 0.18); color: var(--amber); }
 .promise .ic svg { width: 34px; height: 34px; fill: currentColor; }
 .promise h2 { font-size: clamp(30px, 4vw, 40px); margin: 0 0 6px; }
@@ -131,55 +151,72 @@ section { padding-top: 72px; }
 </head>
 <body><header class="top"><div class="wrap">
   <a class="mark" href="/"><img src="/assets/icon-128.png" alt="" width="36" height="36"><span>سكينة</span></a>
-  <nav><a href="#features">المزايا</a><a href="#laptop">على الحاسوب</a><a href="#faq">أسئلة</a><a class="lang" href="/en/" hreflang="en">English</a></nav>
+  <nav><a href="#features">المزايا</a><a href="#everywhere">أين تجده</a><a href="#faq">أسئلة</a><a class="lang" href="/en/" hreflang="en">English</a></nav>
 </div></header>
 <main>
 <div class="hero"><img class="hero-bg" src="/assets/hero-1600.webp" srcset="/assets/hero-640.webp 640w, /assets/hero-1080.webp 1080w, /assets/hero-1600.webp 1600w, /assets/hero-2200.webp 2200w" sizes="100vw" alt="" width="2200" height="1238" fetchpriority="high" decoding="async"><div class="wrap">
   <h1>سكينة</h1>
-  <div class="tag">طمأنينة في بيتك</div>
-  <p class="lead">رفيقٌ إسلامي هادئ لتلفازك وحاسوبك: القرآن بأصوات كبار القرّاء، والأذان في وقته ثم تعود التلاوة من حيث توقفت، وأذكار الصباح والمساء بنصّها وصوتها.</p>
+  <div class="tag">معك أينما كنت</div>
+  <p class="lead">القرآن بأصوات كبار القرّاء، والأذان في وقته، وأذكار الصباح والمساء بنصّها وصوتها. على التلفاز في البيت، وفي المتصفح وقت العمل، وقريباً في جوالك.</p>
   <div class="cta">
-    <span class="btn" aria-disabled="true"><svg viewBox="0 0 24 24"><path d="M3 5h18v12H3zm2 2v8h14V7zM8 19h8v2H8z"/></svg>على تلفاز LG <small>· قريباً</small></span>
-    <a class="btn ghost" href="https://chromewebstore.google.com/detail/ijlckibeakfkmcfcpkkknmnjeclcpdbh" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 6a4 4 0 1 1 0 8 4 4 0 0 1 0-8zm0-4c3 0 5.6 1.6 7 4h-7a4 4 0 0 0-3.9 3L5.6 6.6A8 8 0 0 1 12 4zM4.6 8.3l3.5 6a4 4 0 0 0 4.9 1.6l-2.6 4A8 8 0 0 1 4.6 8.3zm8 11.7l3.5-6a4 4 0 0 0-.6-5H20a8 8 0 0 1-7.4 11z"/></svg>إضافة Chrome</a>
-    <span class="btn ghost" aria-disabled="true"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm6.9 6h-3a15 15 0 0 0-1.3-3.6A8 8 0 0 1 18.9 8zM12 4.1c.8 1.1 1.5 2.4 1.9 3.9h-3.8c.4-1.5 1.1-2.8 1.9-3.9zM4.3 14a8 8 0 0 1 0-4h3.4a16 16 0 0 0 0 4zm.8 2h3a15 15 0 0 0 1.3 3.6A8 8 0 0 1 5.1 16zm3-8h-3a8 8 0 0 1 4.3-3.6C8.8 5.5 8.4 6.7 8.1 8zM12 19.9c-.8-1.1-1.5-2.4-1.9-3.9h3.8c-.4 1.5-1.1 2.8-1.9 3.9zM14.3 14H9.7a14 14 0 0 1 0-4h4.6a14 14 0 0 1 0 4zm.3 5.6c.6-1.1 1-2.3 1.3-3.6h3a8 8 0 0 1-4.3 3.6zM16.3 14a16 16 0 0 0 0-4h3.4a8 8 0 0 1 0 4z"/></svg>إضافة Firefox <small>· قريباً</small></span>
+    <a class="btn" href="#everywhere">احصل على سكينة</a>
+    <a class="btn ghost" href="#screens">صور من التطبيق</a>
   </div>
   <div class="pills"><span>مجاني بالكامل</span><span>بلا إعلانات</span><span>بلا حساب</span><span>بالعربية والإنجليزية</span></div>
 </div></div>
-<div class="tv"><div class="screen"><img src="/screens/ar/home-800.webp" srcset="/screens/ar/home-480.webp 480w, /screens/ar/home-800.webp 800w, /screens/ar/home-1280.webp 1280w" sizes="(max-width: 1032px) calc(100vw - 52px), 980px" alt="الشاشة الرئيسية في صباح جمعة: سورة الكهف بصوت الشيخ محمود خليل الحصري، ومواقيت اليوم." width="1280" height="720" loading="lazy" decoding="async"></div><div class="stand"></div><p class="caption">الشاشة الرئيسية في صباح جمعة: سورة الكهف بصوت الشيخ محمود خليل الحصري، ومواقيت اليوم.</p></div>
+<div class="devices">
+  <div class="tv"><div class="screen"><img src="/screens/ar/home-800.webp" srcset="/screens/ar/home-480.webp 480w, /screens/ar/home-800.webp 800w, /screens/ar/home-1280.webp 1280w" sizes="(max-width: 1032px) calc(100vw - 52px), 980px" alt="الشاشة الرئيسية في صباح جمعة: سورة الكهف بصوت الشيخ محمود خليل الحصري، ومواقيت اليوم." width="1280" height="720" loading="lazy" decoding="async"></div><div class="stand"></div></div>
+  <div class="pop"><img src="/screens/ar/popup-380.webp" alt="المشغّل الصغير في Chrome: مواقيت اليوم والأقسام وما يُتلى الآن" width="380" height="580" loading="lazy" decoding="async"></div>
+  <div class="phone"><img src="/screens/ar/phone-360.webp" alt="تصميم تطبيق الجوال: يومك من الفجر إلى العشاء، وما يُتلى الآن" width="360" height="779" loading="lazy" decoding="async"><span>قريباً</span></div>
+</div>
+<p class="caption">الشاشة الرئيسية في صباح جمعة: سورة الكهف بصوت الشيخ محمود خليل الحصري، ومواقيت اليوم.</p>
 
 <section id="features"><div class="wrap">
-  <div class="eyebrow">ما الذي يفعله</div>
-  <h2>يعيش معك يومك، من الفجر إلى العشاء</h2>
-  <p class="intro">افتحه مرة ودعه يعمل: يعرف موعد كل صلاة في مدينتك، ويختار لكل وقت ما يناسبه.</p>
-  <div class="features"><div class="card star"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2c.6 2 2 3 2 5a2 2 0 0 1-4 0c0-2 1.4-3 2-5zM6 10h12l-1 2H7zM7 13h10v9H7zm3 3v6h4v-6a2 2 0 0 0-4 0z"/></svg></div><h3>الأذان في وقته… ثم تعود التلاوة</h3><p>عند دخول الوقت يرفع الأذان فوق ما تستمع إليه، ثم يُكمل التلاوة من حيث توقفت. صوت مستقل لأذان الفجر.</p></div><div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z"/></svg></div><h3>أذكار الصباح والمساء مع النص</h3><p>من «حصن المسلم»: كل ذكر على الشاشة بخط واضح وبصوته، ويتقدم وحده حتى نهاية الأذكار.</p></div><div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm7 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM9 13c-3.3 0-7 1.7-7 4v3h14v-3c0-2.3-3.7-4-7-4zm7 0c-.5 0-1 0-1.5.1 1.5 1 2.5 2.3 2.5 3.9v3h5v-3c0-2.3-3.1-4-6-4z"/></svg></div><h3>أعلام التلاوة</h3><p>عبد الباسط، المنشاوي، الحصري، البنا، مصطفى إسماعيل، وأئمة الحرمين… مصاحف كاملة بروايات متعددة.</p></div><div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M7 2h2v2h6V2h2v2h3v18H4V4h3zm-1 7v11h12V9z"/></svg></div><h3>الكهف يوم الجمعة، وتكبيرات العيد</h3><p>سورة الكهف مرة كل جمعة، وتكبيرات العيد في أيامها، دون أن تتذكر.</p></div><div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM6.3 6.3l1.4 1.4a6 6 0 0 0 0 8.6l-1.4 1.4a8 8 0 0 1 0-11.4zm11.4 0a8 8 0 0 1 0 11.4l-1.4-1.4a6 6 0 0 0 0-8.6z"/></svg></div><h3>الحرمين مباشر</h3><p>بث المسجد الحرام والمسجد النبوي من القنوات الرسمية، وعلى الحاسوب كإذاعة تسمعها وأنت تعمل.</p></div><div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M11 3h2v10l3.5-3.5 1.4 1.4L12 16.8l-5.9-5.9 1.4-1.4L11 13zM4 19h16v2H4z"/></svg></div><h3>بدون إنترنت</h3><p>حمّل تلاواتك المفضلة واستمع إليها حين ينقطع الاتصال.</p></div></div>
-  <h2 style="margin-top:80px">يومٌ مع سكينة</h2>
-  <div class="day"><div><b>الفجر</b><span>الأذان، ثم أذكار الصباح</span></div><div><b>النهار</b><span>تلاوات خاشعة لا تنقطع</span></div><div><b>الجمعة</b><span>سورة الكهف</span></div><div><b>العصر</b><span>أذكار المساء</span></div><div><b>العيد</b><span>التكبيرات</span></div></div>
+  <div class="eyebrow">المزايا</div>
+  <h2>من الفجر إلى العشاء</h2>
+  <p class="intro">اختر مدينتك مرة واحدة. سكينة يعرف مواقيت الصلاة فيها، ويشغّل في كل وقت ما يناسبه.</p>
+  <div class="features"><div class="card star"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2c.6 2 2 3 2 5a2 2 0 0 1-4 0c0-2 1.4-3 2-5zM6 10h12l-1 2H7zM7 13h10v9H7zm3 3v6h4v-6a2 2 0 0 0-4 0z"/></svg></div><h3>الأذان في وقته، ثم تكمل التلاوة</h3><p>يُرفع الأذان فوق ما تسمعه، وبعده تكمل التلاوة من حيث توقفت. ولأذان الفجر صوت خاص به.</p></div><div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z"/></svg></div><h3>أذكار الصباح والمساء</h3><p>من «حصن المسلم». كل ذكر بنصه على الشاشة وبصوته، وتنتقل الأذكار وحدها حتى آخرها.</p></div><div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm7 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM9 13c-3.3 0-7 1.7-7 4v3h14v-3c0-2.3-3.7-4-7-4zm7 0c-.5 0-1 0-1.5.1 1.5 1 2.5 2.3 2.5 3.9v3h5v-3c0-2.3-3.1-4-6-4z"/></svg></div><h3>كبار القرّاء</h3><p>عبد الباسط والمنشاوي والحصري والبنا ومصطفى إسماعيل وأئمة الحرمين، بمصاحف كاملة وروايات مختلفة.</p></div><div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M7 2h2v2h6V2h2v2h3v18H4V4h3zm-1 7v11h12V9z"/></svg></div><h3>الكهف يوم الجمعة وتكبيرات العيد</h3><p>تُشغَّل سورة الكهف كل جمعة، وتكبيرات العيد في أيامها، دون أن تحتاج إلى تذكّرها.</p></div><div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM6.3 6.3l1.4 1.4a6 6 0 0 0 0 8.6l-1.4 1.4a8 8 0 0 1 0-11.4zm11.4 0a8 8 0 0 1 0 11.4l-1.4-1.4a6 6 0 0 0 0-8.6z"/></svg></div><h3>الحرمين مباشر</h3><p>بث المسجد الحرام والمسجد النبوي من القنوات الرسمية. شاهده بالصورة، أو اسمعه فقط وأنت تعمل.</p></div><div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M11 3h2v10l3.5-3.5 1.4 1.4L12 16.8l-5.9-5.9 1.4-1.4L11 13zM4 19h16v2H4z"/></svg></div><h3>بدون إنترنت</h3><p>حمّل تلاواتك المفضلة واستمع إليها حين ينقطع الاتصال.</p></div></div>
+  <h2 style="margin-top:80px">يوم مع سكينة</h2>
+  <div class="day"><div><b>الفجر</b><span>الأذان، ثم أذكار الصباح</span></div><div><b>النهار</b><span>تلاوات خاشعة طوال اليوم</span></div><div><b>الجمعة</b><span>سورة الكهف</span></div><div><b>العصر</b><span>أذكار المساء</span></div><div><b>العيد</b><span>التكبيرات</span></div></div>
+</div></section>
+
+<section id="everywhere"><div class="wrap">
+  <div class="eyebrow">أين تجده</div>
+  <h2>في البيت، وفي العمل، وفي الطريق</h2>
+  <p class="intro">نسخة المتصفح متاحة اليوم. نسختا التلفاز في مراجعة المتاجر، وتطبيق الجوال قيد التطوير.</p>
+  <div class="places"><div class="place">
+    <div class="ic"><svg viewBox="0 0 24 24"><path d="M7 2h10a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 3v13h10V5zm4 14.2h2v1.3h-2z"/></svg></div>
+    <h3>على الجوال</h3>
+    <p>الأذان والأذكار والتلاوة معك حين تخرج من البيت. نعمل على التطبيق الآن.</p>
+    <ul><li><span><svg class="logo" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.4395 5.5586c-.675 1.1664-1.352 2.3318-2.0274 3.498-.0366-.0155-.0742-.0286-.1113-.043-1.8249-.6957-3.484-.8-4.42-.787-1.8551.0185-3.3544.4643-4.2597.8203-.084-.1494-1.7526-3.021-2.0215-3.4864a1.1451 1.1451 0 0 0-.1406-.1914c-.3312-.364-.9054-.4859-1.379-.203-.475.282-.7136.9361-.3886 1.5019 1.9466 3.3696-.0966-.2158 1.9473 3.3593.0172.031-.4946.2642-1.3926 1.0177C2.8987 12.176.452 14.772 0 18.9902h24c-.119-1.1108-.3686-2.099-.7461-3.0683-.7438-1.9118-1.8435-3.2928-2.7402-4.1836a12.1048 12.1048 0 0 0-2.1309-1.6875c.6594-1.122 1.312-2.2559 1.9649-3.3848.2077-.3615.1886-.7956-.0079-1.1191a1.1001 1.1001 0 0 0-.8515-.5332c-.5225-.0536-.9392.3128-1.0488.5449zm-.0391 8.461c.3944.5926.324 1.3306-.1563 1.6503-.4799.3197-1.188.0985-1.582-.4941-.3944-.5927-.324-1.3307.1563-1.6504.4727-.315 1.1812-.1086 1.582.4941zM7.207 13.5273c.4803.3197.5506 1.0577.1563 1.6504-.394.5926-1.1038.8138-1.584.4941-.48-.3197-.5503-1.0577-.1563-1.6504.4008-.6021 1.1087-.8106 1.584-.4941z"/></svg>Android</span><em class="soon">قريباً</em></li><li><span><svg class="logo" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>iPhone</span><em class="soon">قريباً</em></li></ul>
+  </div><div class="place">
+    <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 5h18v12H3zm2 2v8h14V7zM8 19h8v2H8z"/></svg></div>
+    <h3>على التلفاز</h3>
+    <p>تلاوة يسمعها البيت كله، والأذان على الشاشة الكبيرة، وأذكار بخط كبير يقرؤها الجميع.</p>
+    <ul><li><span><svg class="logo lg" viewBox="0 8.3 24 7.4" role="img" aria-label="LG"><path d="M14.522 14.078h3.27v1.33h-4.847v-6.83h1.577v5.5zm6.74-1.274h1.284v1.195c-.236.09-.698.18-1.137.18-1.42 0-1.893-.721-1.893-2.186 0-1.398.45-2.221 1.869-2.221.791 0 1.24.248 1.612.722l.982-.903c-.6-.855-1.646-1.114-2.629-1.114-2.208 0-3.368 1.205-3.368 3.504 0 2.288 1.047 3.528 3.358 3.528 1.06 0 2.096-.27 2.66-.665V11.53h-2.739v1.274zM5.291 6.709a5.29 5.29 0 1 1 0 10.582 5.291 5.291 0 1 1 0-10.582m3.16 8.457a4.445 4.445 0 0 0 1.31-3.161v-.242l-.22.001H6.596v.494h2.662l-.001.015a3.985 3.985 0 0 1-3.965 3.708 3.95 3.95 0 0 1-2.811-1.165 3.952 3.952 0 0 1-1.164-2.811c0-1.061.414-2.059 1.164-2.81a3.951 3.951 0 0 1 2.81-1.164l.252.003v-.495l-.251-.003a4.475 4.475 0 0 0-4.47 4.469c0 1.194.465 2.316 1.309 3.161a4.444 4.444 0 0 0 3.16 1.31 4.444 4.444 0 0 0 3.162-1.31m-2.91-1.297V9.644H5.04v4.72h1.556v-.495H5.543zm-1.265-3.552a.676.676 0 1 0-.675.674.676.676 0 0 0 .675-.674"/></svg></span><em class="review">قيد المراجعة</em></li><li><span><svg class="logo samsung" viewBox="0 9.6 24 4.8" role="img" aria-label="Samsung"><path d="M19.8166 10.2808l.0459 2.6934h-.023l-.7793-2.6934h-1.2837v3.3925h.8481l-.0458-2.785h.023l.8366 2.785h1.2264v-3.3925zm-16.149 0l-.6418 3.427h.9284l.4699-3.1175h.0229l.4585 3.1174h.9169l-.6304-3.4269zm5.1805 0l-.424 2.6132h-.023l-.424-2.6132H6.5788l-.0688 3.427h.8596l.023-3.0832h.0114l.573 3.0831h.8711l.5731-3.083h.023l.0228 3.083h.8596l-.0802-3.4269zm-7.2664 2.4527c.0343.0802.0229.1949.0114.2522-.0229.1146-.1031.2292-.3324.2292-.2177 0-.3438-.126-.3438-.3095v-.3323H0v.2636c0 .7679.6074.9971 1.2493.9971.6189 0 1.1346-.2178 1.2149-.7794.0458-.298.0114-.4928 0-.5616-.1605-.722-1.467-.9283-1.5588-1.3295-.0114-.0688-.0114-.1375 0-.1834.023-.1146.1032-.2292.3095-.2292.2063 0 .321.126.321.3095v.2063h.8595v-.2407c0-.745-.6762-.8596-1.1576-.8596-.6074 0-1.1117.2063-1.2034.7564-.023.149-.0344.2866.0114.4585.1376.7106 1.364.9169 1.5358 1.3524m11.152 0c.0343.0803.0228.1834.0114.2522-.023.1146-.1032.2292-.3324.2292-.2178 0-.3438-.126-.3438-.3095v-.3323h-.917v.2636c0 .7564.596.9857 1.2379.9857.6189 0 1.1232-.2063 1.2034-.7794.0459-.298.0115-.4814 0-.5616-.1375-.7106-1.4327-.9284-1.5243-1.318-.0115-.0688-.0115-.1376 0-.1835.0229-.1146.1031-.2292.3094-.2292.1948 0 .321.126.321.3095v.2063h.848v-.2407c0-.745-.6647-.8596-1.146-.8596-.6075 0-1.1004.1948-1.192.7564-.023.149-.023.2866.0114.4585.1376.7106 1.341.9054 1.513 1.3524m2.8882.4585c.2407 0 .3094-.1605.3323-.2522.0115-.0343.0115-.0917.0115-.126v-2.533h.871v2.4642c0 .0688 0 .1948-.0114.2292-.0573.6419-.5616.8482-1.192.8482-.6303 0-1.1346-.2063-1.192-.8482 0-.0344-.0114-.1604-.0114-.2292v-2.4642h.871v2.533c0 .0458 0 .0916.0115.126 0 .0917.0688.2522.3095.2522m7.1518-.0344c.2522 0 .3324-.1605.3553-.2522.0115-.0343.0115-.0917.0115-.126v-.4929h-.3553v-.5043H24v.917c0 .0687 0 .1145-.0115.2292-.0573.6303-.596.8481-1.2034.8481-.6075 0-1.1461-.2178-1.2034-.8481-.0115-.1147-.0115-.1605-.0115-.2293v-1.444c0-.0574.0115-.172.0115-.2293.0802-.6419.596-.8482 1.2034-.8482s1.1347.2063 1.2034.8482c.0115.1031.0115.2292.0115.2292v.1146h-.8596v-.1948s0-.0803-.0115-.1261c-.0114-.0802-.0802-.2521-.3438-.2521-.2521 0-.321.1604-.3438.2521-.0115.0458-.0115.1032-.0115.1605v1.5702c0 .0458 0 .0916.0115.126 0 .0917.0917.2522.3323.2522"/></svg></span><em class="review">قيد المراجعة · في الولايات المتحدة أولاً</em></li></ul>
+  </div><div class="place">
+    <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm6.9 6h-3a15 15 0 0 0-1.3-3.6A8 8 0 0 1 18.9 8zM12 4.1c.8 1.1 1.5 2.4 1.9 3.9h-3.8c.4-1.5 1.1-2.8 1.9-3.9zM4.3 14a8 8 0 0 1 0-4h3.4a16 16 0 0 0 0 4zm.8 2h3a15 15 0 0 0 1.3 3.6A8 8 0 0 1 5.1 16zm3-8h-3a8 8 0 0 1 4.3-3.6C8.8 5.5 8.4 6.7 8.1 8zM12 19.9c-.8-1.1-1.5-2.4-1.9-3.9h3.8c-.4 1.5-1.1 2.8-1.9 3.9zM14.3 14H9.7a14 14 0 0 1 0-4h4.6a14 14 0 0 1 0 4zm.3 5.6c.6-1.1 1-2.3 1.3-3.6h3a8 8 0 0 1-4.3 3.6zM16.3 14a16 16 0 0 0 0-4h3.4a8 8 0 0 1 0 4z"/></svg></div>
+    <h3>في المتصفح</h3>
+    <p>مشغّل صغير يستمر في الخلفية وأنت تعمل، ويرفع الأذان في وقته مع إشعار.</p>
+    <ul><li><a href="https://chromewebstore.google.com/detail/ijlckibeakfkmcfcpkkknmnjeclcpdbh" rel="noopener"><svg class="logo" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C8.21 0 4.831 1.757 2.632 4.501l3.953 6.848A5.454 5.454 0 0 1 12 6.545h10.691A12 12 0 0 0 12 0zM1.931 5.47A11.943 11.943 0 0 0 0 12c0 6.012 4.42 10.991 10.189 11.864l3.953-6.847a5.45 5.45 0 0 1-6.865-2.29zm13.342 2.166a5.446 5.446 0 0 1 1.45 7.09l.002.001h-.002l-5.344 9.257c.206.01.413.016.621.016 6.627 0 12-5.373 12-12 0-1.54-.29-3.011-.818-4.364zM12 16.364a4.364 4.364 0 1 1 0-8.728 4.364 4.364 0 0 1 0 8.728Z"/></svg>Chrome</a><em class="live">متاح · ويعمل في Edge وBrave</em></li><li><span><svg class="logo" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.824 7.287c.008 0 .004 0 0 0zm-2.8-1.4c.006 0 .003 0 0 0zm16.754 2.161c-.505-1.215-1.53-2.528-2.333-2.943.654 1.283 1.033 2.57 1.177 3.53l.002.02c-1.314-3.278-3.544-4.6-5.366-7.477-.091-.147-.184-.292-.273-.446a3.545 3.545 0 01-.13-.24 2.118 2.118 0 01-.172-.46.03.03 0 00-.027-.03.038.038 0 00-.021 0l-.006.001a.037.037 0 00-.01.005L15.624 0c-2.585 1.515-3.657 4.168-3.932 5.856a6.197 6.197 0 00-2.305.587.297.297 0 00-.147.37c.057.162.24.24.396.17a5.622 5.622 0 012.008-.523l.067-.005a5.847 5.847 0 011.957.222l.095.03a5.816 5.816 0 01.616.228c.08.036.16.073.238.112l.107.055a5.835 5.835 0 01.368.211 5.953 5.953 0 012.034 2.104c-.62-.437-1.733-.868-2.803-.681 4.183 2.09 3.06 9.292-2.737 9.02a5.164 5.164 0 01-1.513-.292 4.42 4.42 0 01-.538-.232c-1.42-.735-2.593-2.121-2.74-3.806 0 0 .537-2 3.845-2 .357 0 1.38-.998 1.398-1.287-.005-.095-2.029-.9-2.817-1.677-.422-.416-.622-.616-.8-.767a3.47 3.47 0 00-.301-.227 5.388 5.388 0 01-.032-2.842c-1.195.544-2.124 1.403-2.8 2.163h-.006c-.46-.584-.428-2.51-.402-2.913-.006-.025-.343.176-.389.206-.406.29-.787.616-1.136.974-.397.403-.76.839-1.085 1.303a9.816 9.816 0 00-1.562 3.52c-.003.013-.11.487-.19 1.073-.013.09-.026.181-.037.272a7.8 7.8 0 00-.069.667l-.002.034-.023.387-.001.06C.386 18.795 5.593 24 12.016 24c5.752 0 10.527-4.176 11.463-9.661.02-.149.035-.298.052-.448.232-1.994-.025-4.09-.753-5.844z"/></svg>Firefox</span><em class="review">قيد المراجعة</em></li></ul>
+  </div></div>
 </div></section>
 
 <section id="screens"><div class="wrap">
-  <h2>هدوء على الشاشة الكبيرة</h2>
+  <h2>على الشاشة الكبيرة</h2>
   <div class="shots"><figure><img src="/screens/ar/adhkar-800.webp" srcset="/screens/ar/adhkar-480.webp 480w, /screens/ar/adhkar-800.webp 800w, /screens/ar/adhkar-1280.webp 1280w" sizes="(max-width: 700px) 92vw, 360px" alt="أذكار الصباح: كل ذكر بنصه وصوته" width="1280" height="720" loading="lazy" decoding="async"><figcaption>أذكار الصباح: كل ذكر بنصه وصوته</figcaption></figure><figure><img src="/screens/ar/reciter-800.webp" srcset="/screens/ar/reciter-480.webp 480w, /screens/ar/reciter-800.webp 800w, /screens/ar/reciter-1280.webp 1280w" sizes="(max-width: 700px) 92vw, 360px" alt="مصحف كامل بصوت الشيخ الحصري، بروايات متعددة" width="1280" height="720" loading="lazy" decoding="async"><figcaption>مصحف كامل بصوت الشيخ الحصري، بروايات متعددة</figcaption></figure><figure><img src="/screens/ar/adhan-800.webp" srcset="/screens/ar/adhan-480.webp 480w, /screens/ar/adhan-800.webp 800w, /screens/ar/adhan-1280.webp 1280w" sizes="(max-width: 700px) 92vw, 360px" alt="حان الآن موعد الأذان" width="1280" height="720" loading="lazy" decoding="async"><figcaption>حان الآن موعد الأذان</figcaption></figure></div>
 </div></section>
 
-<section id="laptop"><div class="wrap">
-  <div class="laptop">
-    <div>
-      <div class="eyebrow">على الحاسوب</div>
-      <h2>مشغّل صغير في متصفحك</h2>
-      <p class="intro">نفس سكينة في متصفحك: اضغط الأيقونة واختر، ثم أكمل عملك.</p>
-      <ul><li><b>يستمر في الخلفية</b> حتى بعد إغلاق النافذة</li><li><b>دقائق استماعك منذ الفجر</b> على أيقونة الإضافة</li><li><b>الأذان وإشعاره</b> في وقته ولو كانت الصفحة مغلقة</li><li><b>أزرار الوسائط</b> في لوحة المفاتيح تعمل من أي برنامج</li><li><b>الحرمين كإذاعة</b> تسمعها دون أن تشاهد</li></ul>
-    </div>
-    <img src="/screens/ar/popup-380.webp" alt="المشغّل الصغير في Chrome: مواقيت اليوم والأقسام وما يُتلى الآن" width="380" height="580" loading="lazy" decoding="async">
-  </div>
+<section id="privacy"><div class="wrap">
   <div class="promise">
     <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2l8 3v6c0 5-3.4 9.4-8 11-4.6-1.6-8-6-8-11V5zm-1 13l6-6-1.4-1.4L11 12.2 8.4 9.6 7 11z"/></svg></div>
-    <div><h2>خصوصيتك محفوظة</h2><p class="intro">بلا حساب ولا إعلانات ولا بيع لأي بيانات. المواقيت تُحسب على جهازك، وإحصاءات الاستخدام مجهولة تماماً ويمكنك إيقافها من الإعدادات. <a href="/privacy/">سياسة الخصوصية</a></p></div>
+    <div><h2>خصوصيتك</h2><p class="intro">لا حساب ولا إعلانات، ولا نبيع أي بيانات. تُحسب المواقيت على جهازك. نجمع إحصاءات استخدام مجهولة يمكنك إيقافها من الإعدادات، وفي Firefox وSamsung لا نرسلها إلا بعد موافقتك. <a href="/privacy/">سياسة الخصوصية</a></p></div>
   </div>
 </div></section>
 
 <section id="faq"><div class="wrap">
   <h2>أسئلة شائعة</h2>
-  <div class="faq"><details><summary>هل سكينة مجاني؟</summary><p>نعم، مجاني بالكامل، بلا إعلانات ولا اشتراكات.</p></details><details><summary>ما التلفزيونات المدعومة؟</summary><p>تلفزيونات LG الذكية بنظام webOS 4 (2018) فأحدث. التطبيق في طريقه إلى متجر LG.</p></details><details><summary>وعلى الحاسوب؟</summary><p>إضافة لمتصفح Chrome (وتعمل أيضاً في Edge وBrave) متاحة مجاناً على متجر Chrome الإلكتروني، وإضافة لمتصفح Firefox في طريقها إلى متجر إضافات Firefox.</p></details><details><summary>من أين التلاوات؟</summary><p>من التلاوات المنشورة على موقع TvQuran.com. سكينة تطبيق مستقل غير تابع للموقع، ونص الأذكار وصوتها من «حصن المسلم».</p></details><details><summary>كيف تُحسب مواقيت الصلاة؟</summary><p>على جهازك حسب مدينتك وطريقة الحساب المعتمدة في بلدك (أم القرى في السعودية)، ويمكنك تغيير المدينة والطريقة من الإعدادات.</p></details><details><summary>هل يعمل بدون إنترنت؟</summary><p>نعم للتلاوات التي حمّلتها، والمواقيت والأذكار المحفوظة. البث المباشر يحتاج اتصالاً.</p></details><details><summary>كيف أرسل اقتراحاً أو مشكلة؟</summary><p>من داخل التطبيق: الإعدادات ← «شاركنا رأيك»، أو راسلنا على sakinah@jazary.com. نقرأ كل رسالة.</p></details></div>
+  <div class="faq"><details><summary>هل سكينة مجاني؟</summary><p>نعم، مجاني بالكامل، بلا إعلانات ولا اشتراكات.</p></details><details><summary>على أي الأجهزة يعمل سكينة؟</summary><p>في متصفح Chrome الآن، ويعمل أيضاً في Edge وBrave. نسخة Firefox ونسختا تلفزيونات LG وSamsung في مراجعة المتاجر، وتطبيق الجوال لأندرويد وiPhone قيد التطوير.</p></details><details><summary>ما التلفزيونات المدعومة؟</summary><p>تلفزيونات LG الذكية بنظام webOS 4 (2018) فأحدث، وتلفزيونات Samsung الذكية بنظام Tizen 4 (2018) فأحدث. على Samsung يصدر في الولايات المتحدة أولاً، ثم في بقية الدول.</p></details><details><summary>هل يوجد تطبيق للجوال؟</summary><p>نعمل على تطبيق لأندرويد وiPhone. سنعلن عنه هنا حين يصبح متاحاً.</p></details><details><summary>من أين التلاوات؟</summary><p>من التلاوات المنشورة على موقع TvQuran.com. سكينة تطبيق مستقل غير تابع للموقع، ونص الأذكار وصوتها من «حصن المسلم».</p></details><details><summary>كيف تُحسب مواقيت الصلاة؟</summary><p>على جهازك حسب مدينتك وطريقة الحساب المعتمدة في بلدك (أم القرى في السعودية)، ويمكنك تغيير المدينة والطريقة من الإعدادات.</p></details><details><summary>هل يعمل بدون إنترنت؟</summary><p>نعم للتلاوات التي حمّلتها، والمواقيت والأذكار المحفوظة. البث المباشر يحتاج اتصالاً.</p></details><details><summary>كيف أرسل اقتراحاً أو مشكلة؟</summary><p>من داخل التطبيق: الإعدادات ← «شاركنا رأيك»، أو راسلنا على sakinah@jazary.com. نقرأ كل رسالة.</p></details></div>
 </div></section>
 </main>
 <footer><div class="wrap">
