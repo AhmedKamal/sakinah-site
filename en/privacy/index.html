@@ -147,7 +147,12 @@ body { font-size: 17px; }
 .top nav a:not(.lang) { display: none; }
 .hero .wrap { padding-top: 100px; }
 section { padding-top: 72px; }
-}</style>
+}
+.bye { display: grid; gap: 10px; margin-top: 24px; max-width: 560px; }
+.bye label { display: flex; gap: 10px; align-items: center; padding: 12px 16px; border-radius: 14px; background: var(--panel); border: 1px solid var(--line); cursor: pointer; }
+.bye label.more { flex-direction: column; align-items: stretch; cursor: default; }
+.bye textarea { font: inherit; color: inherit; background: transparent; border: 1px solid var(--line); border-radius: 10px; padding: 10px; resize: vertical; }
+.bye input[type="radio"] { accent-color: var(--terracotta); }</style>
 </head>
 <body><header class="top solid"><div class="wrap">
   <a class="mark" href="/en/"><img src="/assets/icon-128.png" alt="" width="36" height="36"><span>سكينة</span></a>
@@ -166,6 +171,7 @@ section { padding-top: 72px; }
 
   <h2>Feedback messages</h2>
   <p>If you send an idea, request or problem from "Send feedback", your message and its type, your email if you typed it, and the app's language and version are sent to PostHog so we can read it and reply. This happens only when you press Send.</p>
+  <p>If you remove the Sakinah extension from your browser, a page on our website asks why. Answering is optional and nothing is sent unless you press Send: the reason you picked and your comment if you wrote one, with the extension version and browser.</p>
 
   <h2>What is stored on your TV only</h2>
   <p>The app keeps, on your TV alone: the recitations you choose to download, what you were last listening to and where you stopped, your settings (city, prayer-time method and so on), and a copy of the recitation lists so the app works offline. None of this is sent anywhere.</p>

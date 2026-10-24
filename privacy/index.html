@@ -147,7 +147,12 @@ body { font-size: 17px; }
 .top nav a:not(.lang) { display: none; }
 .hero .wrap { padding-top: 100px; }
 section { padding-top: 72px; }
-}</style>
+}
+.bye { display: grid; gap: 10px; margin-top: 24px; max-width: 560px; }
+.bye label { display: flex; gap: 10px; align-items: center; padding: 12px 16px; border-radius: 14px; background: var(--panel); border: 1px solid var(--line); cursor: pointer; }
+.bye label.more { flex-direction: column; align-items: stretch; cursor: default; }
+.bye textarea { font: inherit; color: inherit; background: transparent; border: 1px solid var(--line); border-radius: 10px; padding: 10px; resize: vertical; }
+.bye input[type="radio"] { accent-color: var(--terracotta); }</style>
 </head>
 <body><header class="top solid"><div class="wrap">
   <a class="mark" href="/"><img src="/assets/icon-128.png" alt="" width="36" height="36"><span>سكينة</span></a>
@@ -166,6 +171,7 @@ section { padding-top: 72px; }
 
   <h2>رسائل الملاحظات</h2>
   <p>إذا أرسلت فكرة أو طلباً أو مشكلة من «شاركنا رأيك»، يُرسَل نص رسالتك ونوعها، وبريدك الإلكتروني إن كتبته، مع لغة التطبيق ونسخته، إلى PostHog لنقرأها ونرد عليك. يحدث ذلك فقط عند ضغطك «إرسال».</p>
+  <p>وإذا أزلت إضافة سكينة من المتصفح، تُفتح صفحة على موقعنا تسألك عن السبب. الإجابة اختيارية، ولا يُرسل شيء إلا إذا ضغطت «إرسال»: السبب الذي اخترته وتعليقك إن كتبته، مع نسخة الإضافة ونوع المتصفح.</p>
 
   <h2>ما يُحفظ على التلفاز فقط</h2>
   <p>يحفظ التطبيق على جهازك وحده: التلاوات التي تختار تحميلها، وآخر ما كنت تستمع إليه وموضع التوقف، وإعداداتك (المدينة وطريقة حساب المواقيت وغيرها)، ونسخة من قوائم التلاوات لتعمل بدون إنترنت. لا تُرسل هذه البيانات إلى أي جهة.</p>
