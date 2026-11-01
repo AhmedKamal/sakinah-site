@@ -3,231 +3,388 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sakinah | Quran, adhan and adhkar on your TV, browser and phone</title>
-<meta name="description" content="Sakinah plays the Quran by the great reciters and calls the adhan on time, then goes back to the recitation. It also has the morning and evening adhkar, Al-Kahf on Fridays and the Haramain live. Free, with no ads.">
+<title>Sakinah | With you all day: adhan, Quran and adhkar</title>
+<meta name="description" content="Sakinah, with you all day long: moving recitations from hundreds of reciters, the adhan in your favourite voice even on silent, and a sibha at your fingertips. Free, no ads, no account.">
 <link rel="canonical" href="https://sakinah.jazary.com/en/">
 <link rel="alternate" hreflang="ar" href="https://sakinah.jazary.com/">
 <link rel="alternate" hreflang="en" href="https://sakinah.jazary.com/en/">
 <link rel="icon" href="/favicon.png">
 <link rel="apple-touch-icon" href="/assets/icon-128.png">
-<meta name="theme-color" content="#17120e">
+<meta name="theme-color" content="#15110d">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Sakinah | Quran, adhan and adhkar on your TV, browser and phone">
-<meta property="og:description" content="Sakinah plays the Quran by the great reciters and calls the adhan on time, then goes back to the recitation. It also has the morning and evening adhkar, Al-Kahf on Fridays and the Haramain live. Free, with no ads.">
+<meta property="og:title" content="Sakinah | With you all day: adhan, Quran and adhkar">
+<meta property="og:description" content="Sakinah, with you all day long: moving recitations from hundreds of reciters, the adhan in your favourite voice even on silent, and a sibha at your fingertips. Free, no ads, no account.">
 <meta property="og:image" content="https://sakinah.jazary.com/assets/og.jpg">
 <meta property="og:url" content="https://sakinah.jazary.com/en/">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="preload" href="/assets/fonts/ArefRuqaa-700-arabic.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" as="image" imagesrcset="/assets/hero-640.webp 640w, /assets/hero-1080.webp 1080w, /assets/hero-1600.webp 1600w, /assets/hero-2200.webp 2200w" imagesizes="100vw" fetchpriority="high">
-<style>@font-face { font-family: 'Ruqaa'; font-weight: 700; font-display: swap; src: url(/assets/fonts/ArefRuqaa-700-arabic.woff2) format('woff2'); }
-@font-face { font-family: 'Plex'; font-weight: 400; font-display: swap; src: url(/assets/fonts/IBMPlexSansArabic-400-arabic.woff2) format('woff2'); unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFC, U+200C-200E; }
-@font-face { font-family: 'Plex'; font-weight: 400; font-display: swap; src: url(/assets/fonts/IBMPlexSansArabic-400-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+2000-206F; }
-@font-face { font-family: 'Plex'; font-weight: 600; font-display: swap; src: url(/assets/fonts/IBMPlexSansArabic-600-arabic.woff2) format('woff2'); unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFC, U+200C-200E; }
-@font-face { font-family: 'Plex'; font-weight: 600; font-display: swap; src: url(/assets/fonts/IBMPlexSansArabic-600-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+2000-206F; }
+<meta name="twitter:site" content="@sakinahtime">
+<style>
+@font-face { font-family: 'Aref Ruqaa'; font-weight: 700; font-display: swap; src: url(/assets/fonts/ArefRuqaa-700-arabic.woff2) format('woff2'); }
+@font-face { font-family: 'IBM Plex Sans Arabic'; font-weight: 400; font-display: swap; src: url(/assets/fonts/IBMPlexSansArabic-400-arabic.woff2) format('woff2'); unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF; }
+@font-face { font-family: 'IBM Plex Sans Arabic'; font-weight: 400; font-display: swap; src: url(/assets/fonts/IBMPlexSansArabic-400-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+2000-206F; }
+@font-face { font-family: 'IBM Plex Sans Arabic'; font-weight: 600; font-display: swap; src: url(/assets/fonts/IBMPlexSansArabic-600-arabic.woff2) format('woff2'); unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF; }
+@font-face { font-family: 'IBM Plex Sans Arabic'; font-weight: 600; font-display: swap; src: url(/assets/fonts/IBMPlexSansArabic-600-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+2000-206F; }
+
 :root {
---ink: #17120e; --ink-2: #1e1712; --panel: #221a14; --panel-hi: #2e2118; --sand: #f2e8d5; --bright: #fbf3e3;
---muted: rgba(242, 232, 213, 0.72); --faint: rgba(242, 232, 213, 0.5); --line: rgba(242, 232, 213, 0.12);
---amber: #e0a872; --terracotta: #c8774a; --focus: #a35a33;
+  --bg: #15110d; --bg2: #1d1712; --card: #231b15; --line: #3a2d22;
+  --text: #f4ead8; --muted: #b9a990; --accent: #d98a55; --accent2: #e8b07d; --live: #8fc79a;
+  color-scheme: dark;
 }
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html { background: var(--ink); color: var(--sand); scroll-behavior: smooth; }
-body { font: 400 18px/1.75 'Plex', system-ui, -apple-system, 'Segoe UI', sans-serif; -webkit-font-smoothing: antialiased; }
-html[lang="en"] body { line-height: 1.65; }
-a { color: inherit; }
-img { display: block; max-width: 100%; height: auto; }
-.wrap { width: min(1120px, 100% - 32px); margin-inline: auto; }
-.ruqaa { font-family: 'Ruqaa', serif; font-weight: 700; }
-.top { position: absolute; inset-inline: 0; top: 0; z-index: 3; }
-.top .wrap { display: flex; align-items: center; justify-content: space-between; padding: 18px 0; }
-.mark { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-.mark img { width: 36px; height: 36px; border-radius: 9px; }
-.mark span { font: 700 26px/1 'Ruqaa', serif; color: #ead9b8; }
-.top nav { display: flex; align-items: center; gap: 22px; font-size: 15px; }
-.top nav a { text-decoration: none; color: var(--muted); }
-.top nav a:hover { color: var(--bright); }
-.top nav .lang { padding: 6px 14px; border: 1px solid var(--line); border-radius: 18px; color: var(--sand); }
-.hero { position: relative; min-height: min(92vh, 860px); display: flex; align-items: center; overflow: hidden; }
-.hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 40%; }
-.hero::after { content: ''; position: absolute; inset: 0;
-background: linear-gradient(180deg, rgba(23, 18, 14, 0.55) 0%, rgba(23, 18, 14, 0.35) 40%, rgba(23, 18, 14, 0.92) 92%, var(--ink) 100%); }
-.hero .wrap { position: relative; z-index: 2; padding: 120px 0 60px; }
-.hero h1 { font: 700 clamp(84px, 14vw, 168px)/1.15 'Ruqaa', serif; color: #ead9b8; text-shadow: 0 6px 40px rgba(0, 0, 0, 0.45); }
-html[lang="en"] .hero h1 { font: 600 clamp(60px, 10vw, 120px)/1.1 'Plex', sans-serif; letter-spacing: -2px; }
-.hero .tag { font-size: clamp(22px, 3vw, 30px); color: var(--amber); margin-top: 2px; }
-.hero p.lead { max-width: 640px; margin-top: 18px; font-size: clamp(17px, 2vw, 20px); color: var(--sand); text-shadow: 0 2px 16px rgba(0, 0, 0, 0.5); }
-.cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
-.btn { display: inline-flex; align-items: center; gap: 10px; padding: 13px 22px; border-radius: 30px; font-weight: 600; text-decoration: none;
-background: var(--terracotta); color: #fff; border: 1px solid transparent; }
-.btn:hover { background: var(--focus); }
-.btn.ghost { background: rgba(23, 18, 14, 0.55); border-color: rgba(242, 232, 213, 0.25); color: var(--sand); }
-.btn.ghost:hover { background: rgba(23, 18, 14, 0.8); }
-.btn small { font-weight: 400; font-size: 13px; opacity: 0.8; }
-.btn svg { width: 20px; height: 20px; fill: currentColor; }
-.pills { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 22px; color: var(--muted); font-size: 15px; }
-.pills span::before { content: '✦'; color: var(--amber); margin-inline-end: 8px; font-size: 11px; vertical-align: 2px; }
-.devices { position: relative; z-index: 2; width: min(1000px, 100% - 32px); margin: -40px auto 0; }
-.tv .screen { border-radius: 14px; overflow: hidden; border: 10px solid #0d0a08; box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(242, 232, 213, 0.08); }
-.tv .stand { width: 26%; height: 14px; margin: 0 auto; background: linear-gradient(#0d0a08, #070504); border-radius: 0 0 10px 10px; }
-.devices .pop { position: absolute; inset-inline-start: -3%; bottom: -6%; width: 25%; border-radius: 14px; overflow: hidden;
-box-shadow: 0 30px 70px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(242, 232, 213, 0.12); }
-.devices .phone { position: absolute; inset-inline-end: -2%; bottom: -10%; width: 19%; border-radius: 30px; padding: 6px;
-background: #0d0a08; box-shadow: 0 30px 70px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(242, 232, 213, 0.16); }
-.devices .phone img { display: block; width: 100%; height: auto; border-radius: 24px; }
-.devices .phone span { position: absolute; top: -13px; inset-inline-start: 50%; transform: translateX(-50%); white-space: nowrap;
-padding: 4px 12px; border-radius: 99px; background: var(--terracotta); color: #fff7ea; font-size: 13px; font-weight: 600; }
-[dir="rtl"] .devices .phone span { transform: translateX(50%); }
-.caption { text-align: center; color: var(--faint); font-size: 14px; margin-top: 64px; padding: 0 16px; }
-@media (max-width: 700px) { .devices .pop { display: none; } .devices .phone { width: 24%; inset-inline-end: 3%; bottom: -18%; border-radius: 18px; padding: 4px; } .devices .phone img { border-radius: 14px; } .devices .phone span { font-size: 10px; padding: 2px 8px; top: -10px; } .caption { margin-top: 72px; } }
-section { padding: 96px 0 0; }
-.eyebrow { color: var(--amber); font-size: 15px; letter-spacing: 0.02em; }
-h2 { font: 700 clamp(38px, 5vw, 56px)/1.25 'Ruqaa', serif; color: var(--bright); margin: 4px 0 14px; }
-html[lang="en"] h2 { font: 600 clamp(30px, 4vw, 42px)/1.2 'Plex', sans-serif; letter-spacing: -0.5px; }
-.intro { max-width: 720px; color: var(--muted); }
-.features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 36px; }
-@media (max-width: 900px) { .features { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 560px) { .features { grid-template-columns: 1fr; } }
-.card { padding: 24px; border-radius: 18px; background: var(--panel); border: 1px solid var(--line); }
-.card .ic { width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; background: rgba(200, 119, 74, 0.18); color: var(--amber); margin-bottom: 14px; }
-.card .ic svg { width: 24px; height: 24px; fill: currentColor; }
-.card h3 { font-size: 19px; font-weight: 600; color: var(--bright); margin-bottom: 6px; }
-.card p { color: var(--muted); font-size: 16px; }
-.card.star { background: linear-gradient(135deg, rgba(200, 119, 74, 0.28), rgba(200, 119, 74, 0.06)); border-color: rgba(224, 168, 114, 0.3); }
-.day { margin-top: 36px; display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 0; border-top: 1px solid var(--line); }
-.day div { padding: 22px 18px 6px 0; position: relative; }
-html[dir="rtl"] .day div { padding: 22px 0 6px 18px; }
-.day div::before { content: ''; position: absolute; top: -6px; inset-inline-start: 0; width: 11px; height: 11px; border-radius: 50%; background: var(--ink); border: 2px solid var(--amber); }
-.day b { display: block; color: var(--amber); font-weight: 600; }
-.day span { color: var(--muted); font-size: 16px; }
-.shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; margin-top: 36px; }
-.shots figure { border-radius: 14px; overflow: hidden; background: var(--panel); border: 1px solid var(--line); }
-.shots figcaption { padding: 12px 16px; color: var(--muted); font-size: 15px; }
-.places { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 36px; }
-@media (max-width: 900px) { .places { grid-template-columns: 1fr; } }
-.place { padding: 28px; border-radius: 20px; background: var(--panel); border: 1px solid var(--line); display: flex; flex-direction: column; }
-.place .ic { width: 52px; height: 52px; border-radius: 14px; display: grid; place-items: center; background: rgba(200, 119, 74, 0.18); color: var(--amber); margin-bottom: 16px; }
-.place .ic svg { width: 28px; height: 28px; fill: currentColor; }
-.place h3 { font-size: 22px; font-weight: 600; color: var(--bright); margin-bottom: 6px; }
-.place p { color: var(--muted); font-size: 16px; flex: 1; }
-.place ul { list-style: none; margin-top: 20px; border-top: 1px solid var(--line); }
-.place li { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line); font-weight: 600; }
-.place li a { color: var(--bright); text-decoration-color: var(--amber); text-underline-offset: 4px; }
-.place li > a, .place li > span { display: inline-flex; align-items: center; gap: 10px; }
-.place .logo { width: 20px; height: 20px; fill: currentColor; flex: none; }
-.place .logo.samsung { width: 92px; height: 18px; }
-.place .logo.lg { width: 62px; height: 19px; }
-.place em { font-style: normal; font-weight: 400; font-size: 14px; color: var(--faint); text-align: end; }
-.place em.live { color: #9fd3a0; }
-.place em.review { color: var(--amber); }
-.promise { margin-top: 0; padding: 44px; border-radius: 22px; background: var(--ink-2); border: 1px solid var(--line); display: grid; grid-template-columns: auto 1fr; gap: 28px; align-items: center; }
-.promise .ic { width: 64px; height: 64px; border-radius: 18px; display: grid; place-items: center; background: rgba(200, 119, 74, 0.18); color: var(--amber); }
-.promise .ic svg { width: 34px; height: 34px; fill: currentColor; }
-.promise h2 { font-size: clamp(30px, 4vw, 40px); margin: 0 0 6px; }
-@media (max-width: 620px) { .promise { grid-template-columns: 1fr; padding: 28px; } }
-.faq { margin-top: 30px; max-width: 820px; }
-.faq details { border-bottom: 1px solid var(--line); padding: 16px 0; }
-.faq summary { cursor: pointer; font-weight: 600; color: var(--bright); list-style: none; display: flex; justify-content: space-between; gap: 16px; }
-.faq summary::after { content: '+'; color: var(--amber); font-size: 22px; line-height: 1; }
-.faq details[open] summary::after { content: '–'; }
-.faq summary::-webkit-details-marker { display: none; }
-.faq p { color: var(--muted); margin-top: 8px; }
-footer { margin-top: 110px; padding: 40px 0 50px; border-top: 1px solid var(--line); color: var(--faint); font-size: 14px; }
-footer .wrap { display: flex; flex-wrap: wrap; gap: 14px 30px; justify-content: space-between; }
-footer nav { display: flex; gap: 20px; flex-wrap: wrap; }
-footer a { color: var(--muted); }
-footer .credit { flex-basis: 100%; font-size: 13px; }
-.doc { padding: 120px 0 0; max-width: 760px; }
-.doc h1 { font: 700 52px/1.2 'Ruqaa', serif; color: var(--bright); }
-html[lang="en"] .doc h1 { font: 600 40px/1.2 'Plex', sans-serif; }
-.doc .date { color: var(--faint); font-size: 14px; margin-top: 6px; }
-.doc h2 { font: 600 22px/1.4 'Plex', sans-serif; color: var(--amber); margin: 34px 0 8px; }
-.doc p { color: var(--muted); }
-.top.solid { position: static; border-bottom: 1px solid var(--line); }
-@media (max-width: 620px) {
-body { font-size: 17px; }
-.top nav a:not(.lang) { display: none; }
-.hero .wrap { padding-top: 100px; }
-section { padding-top: 72px; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #15110d; --text: #f4ead8; } }
+:root[data-theme="dark"] { --bg: #15110d; --text: #f4ead8; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--bg); color: var(--text); font-family: 'IBM Plex Sans Arabic', system-ui, sans-serif; font-weight: 400; line-height: 1.75; overflow-x: hidden; }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+a { color: var(--accent2); }
+.ruq { font-family: 'Aref Ruqaa', serif; font-weight: 700; }
+
+header { position: sticky; top: 0; z-index: 5; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+header .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+.logo { font-size: 30px; color: var(--text); text-decoration: none; }
+.cta { background: var(--accent); color: #1a120c; text-decoration: none; padding: 8px 16px; border-radius: 999px; font-weight: 600; font-size: 14px; }
+
+.hero { padding: 72px 0 40px; text-align: center; background: radial-gradient(900px 420px at 50% 0%, #3a2819 0%, transparent 70%); }
+.hero h1 { font-size: clamp(32px, 6vw, 58px); line-height: 1.3; margin: 0 0 18px; font-weight: 600; }
+.hero p { font-size: clamp(16px, 2.2vw, 20px); color: var(--muted); max-width: 760px; margin: 0 auto 28px; }
+.get { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.store { display: flex; align-items: center; gap: 12px; padding: 10px 22px 10px 18px; min-width: 210px; border-radius: 16px; text-decoration: none; color: #1a120c; background: #f4ead8; box-shadow: 0 8px 24px rgba(0,0,0,.35); transition: transform .15s, box-shadow .15s; }
+.store:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(0,0,0,.45); }
+.store svg { width: 34px; height: 34px; flex: none; }
+.store span { display: flex; flex-direction: column; line-height: 1.25; text-align: right; }
+.store small { font-size: 12px; color: #6b5843; }
+.store b { font-size: 20px; font-weight: 600; direction: ltr; text-align: right; }
+.soon { display: flex; gap: 8px; justify-content: center; align-items: center; flex-wrap: wrap; margin-top: 18px; }
+.soon .lbl { font-size: 13px; color: var(--muted); }
+.chip { display: inline-flex; align-items: center; gap: 7px; font-size: 13px; color: var(--text); border: 1px solid var(--line); background: var(--bg2); border-radius: 999px; padding: 5px 12px; }
+.chip svg { width: 16px; height: 16px; }
+.promise { margin-top: 18px; color: var(--muted); font-size: 14px; }
+
+.trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 44px; }
+.trio div { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 16px; text-align: right; }
+.trio b { display: block; color: var(--accent2); font-size: 13px; }
+.trio span { font-size: 15px; }
+
+.moment { padding: 64px 0; border-top: 1px solid var(--line); }
+.moment .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.moment:nth-of-type(even) .wrap > .copy { order: 2; }
+.time { color: var(--accent2); font-size: 14px; font-weight: 600; letter-spacing: .3px; }
+.time i { font-style: normal; color: var(--muted); font-weight: 400; }
+.moment h2 { font-size: clamp(26px, 3.6vw, 38px); line-height: 1.35; margin: 6px 0 14px; font-weight: 600; }
+.moment p { color: var(--muted); font-size: 17px; margin: 0 0 18px; }
+.feats { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 0 0 16px; list-style: none; }
+.feats li { background: var(--bg2); border: 1px solid var(--line); border-radius: 999px; padding: 4px 12px; font-size: 13px; }
+.where { font-size: 13px; color: var(--muted); }
+.where .on { color: var(--live); }
+.switch { display: inline-flex; background: var(--bg2); border: 1px solid var(--line); border-radius: 999px; padding: 3px; margin-bottom: 14px; }
+.switch button { background: none; border: 0; color: var(--muted); font: inherit; font-size: 13px; padding: 4px 14px; border-radius: 999px; cursor: pointer; }
+.switch button.on { background: var(--accent); color: #1a120c; font-weight: 600; }
+.stage { display: flex; justify-content: center; align-items: center; gap: 18px; min-height: 420px; }
+
+/* Device frames (true proportions). */
+.phone { width: min(250px, 42vw); aspect-ratio: 1206 / 2622; border-radius: 38px; background: #000; padding: 9px; box-shadow: 0 30px 80px rgba(0,0,0,.55), 0 0 0 1px #3b3b3b inset; }
+.phone video, .phone img { width: 100%; height: 100%; object-fit: cover; border-radius: 30px; display: block; background: #000; }
+.phone.sm { width: min(190px, 36vw); }
+/* Android: its own proportions (1080×2424), squarer corners and a thin even bezel. */
+.phone.android { aspect-ratio: 1080 / 2424; border-radius: 26px; padding: 6px; background: #121212; box-shadow: 0 30px 80px rgba(0,0,0,.55), 0 0 0 1px #2e2e2e inset; }
+.phone.android video, .phone.android img { border-radius: 21px; object-fit: contain; }
+.laptop { width: 100%; max-width: 540px; }
+.laptop .scr { aspect-ratio: 16 / 10; background: #000; border: 10px solid #111; border-radius: 14px 14px 0 0; overflow: hidden; position: relative; }
+.laptop .scr video, .laptop .scr img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.laptop .base { height: 14px; background: linear-gradient(#2c2c2c, #151515); border-radius: 0 0 16px 16px; margin: 0 -24px; }
+.tv { width: 100%; max-width: 560px; }
+.tv .scr { aspect-ratio: 16 / 9; background: #000; border: 8px solid #0b0b0b; border-radius: 8px; overflow: hidden; box-shadow: 0 30px 80px rgba(0,0,0,.55); }
+.tv .scr video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.tv .foot { width: 26%; height: 10px; margin: 0 auto; background: #1a1a1a; border-radius: 0 0 8px 8px; }
+.cap { text-align: center; color: var(--muted); font-size: 13px; margin-top: 10px; }
+
+/* The work moment: a work window with the toolbar popup and the adhan notification sliding in. */
+.desk { position: relative; }
+.desk .doc { position: absolute; inset: 0; background: #f3efe7; padding: 7% 8%; }
+.desk .doc i { display: block; height: 7px; background: #d9d2c4; border-radius: 4px; margin-bottom: 9px; }
+.desk .doc i:nth-child(3n) { width: 70%; } .desk .doc i:nth-child(4n) { width: 85%; }
+.desk .bar { position: absolute; top: 0; left: 0; right: 0; height: 26px; background: #e2ddd3; display: flex; align-items: center; justify-content: flex-start; padding: 0 10px; gap: 6px; direction: ltr; }
+.desk .bar span { width: 9px; height: 9px; border-radius: 50%; background: #c9c1b3; }
+.desk .ico { margin-left: auto; position: relative; width: 18px; height: 18px; border-radius: 5px; background: #c8774a; color: #f7ecd8; font: 700 10px/18px 'Aref Ruqaa'; text-align: center; }
+.desk .badge { position: absolute; top: -6px; right: -10px; background: #2f6f3e; color: #fff; font: 600 8px/13px 'IBM Plex Sans Arabic'; padding: 0 4px; border-radius: 7px; }
+.laptop .scr.desk img.pop { position: absolute; width: 32%; height: auto; object-fit: contain; top: 30px; left: 8px; width: 32%; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,.35); animation: pop 9s infinite; transform-origin: top left; }
+.desk .notif { position: absolute; bottom: 10px; right: 10px; width: 52%; background: #2a2622; color: #f4ead8; border-radius: 10px; padding: 8px 10px; font-size: 11px; line-height: 1.5; box-shadow: 0 10px 30px rgba(0,0,0,.4); display: flex; gap: 8px; align-items: center; animation: notif 9s infinite; }
+.desk .notif .ic { width: 26px; height: 26px; flex: none; border-radius: 6px; background: #c8774a; font: 700 14px/26px 'Aref Ruqaa'; text-align: center; color: #f7ecd8; }
+.desk .notif b { display: block; font-size: 12px; }
+@keyframes pop { 0%, 8% { opacity: 0; transform: scale(.9); } 12%, 45% { opacity: 1; transform: scale(1); } 50%, 100% { opacity: 0; transform: scale(.9); } }
+@keyframes notif { 0%, 52% { opacity: 0; transform: translateY(20px); } 58%, 92% { opacity: 1; transform: none; } 100% { opacity: 0; } }
+
+/* The watch, drawn until its recording arrives: the crown turns and a bead moves round the edge. */
+.watch .face video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.watch { width: 230px; aspect-ratio: 396 / 484; height: auto; border-radius: 54px; background: #0b0b0b; padding: 12px; position: relative; box-shadow: 0 30px 80px rgba(0,0,0,.55), 0 0 0 2px #2a2a2a inset; }
+.watch .crown { position: absolute; right: -10px; top: 70px; width: 12px; height: 38px; border-radius: 6px; background: repeating-linear-gradient(#5a5a5a 0 2px, #3a3a3a 2px 4px); animation: crown 1.2s linear infinite; }
+@keyframes crown { to { background-position: 0 8px; } }
+.watch .face { position: relative; width: 100%; height: 100%; border-radius: 46px; background: #000; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 26px; }
+.watch .k { color: var(--accent2); font-size: 12px; }
+.watch .t { font-size: 13px; line-height: 1.6; margin: 4px 0; }
+.watch .n { font-size: 30px; font-weight: 600; line-height: 1; }
+.watch .beads i { position: absolute; width: 8px; height: 8px; margin: -4px; border-radius: 50%; background: #3b3027; }
+.watch .beads i.done { background: var(--accent); }
+.watch .note { position: absolute; inset: 0; background: rgba(0,0,0,.92); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; padding: 24px; border-radius: 46px; animation: wnote 10s infinite; }
+.watch .note .ic { width: 38px; height: 38px; border-radius: 50%; background: #c8774a; color: #f7ecd8; font: 700 20px/38px 'Aref Ruqaa'; }
+.watch .note b { font-size: 14px; }
+.watch .note span { font-size: 11px; color: var(--muted); }
+@keyframes wnote { 0%, 22% { opacity: 1; } 28%, 100% { opacity: 0; } }
+
+.why { padding: 8px 0 56px; }
+.whys { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.whys div { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 18px; }
+.whys b { display: block; font-size: 17px; font-weight: 600; margin-bottom: 6px; color: var(--text); }
+.whys span { color: var(--muted); font-size: 14px; }
+@media (max-width: 820px) { .whys { grid-template-columns: 1fr; } }
+.faq details { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 14px 18px; margin-bottom: 10px; }
+.faq summary { cursor: pointer; font-weight: 600; font-size: 16px; }
+.faq p { color: var(--muted); margin: 10px 0 0; }
+.small { padding: 56px 0; border-top: 1px solid var(--line); }
+.cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 22px; }
+.card h3 { margin: 4px 0 8px; font-size: 22px; font-weight: 600; }
+.card p { margin: 0; color: var(--muted); }
+
+.devices { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+.dev { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 16px; }
+.dev b { display: block; font-size: 17px; }
+.st { font-size: 12px; color: var(--muted); }
+.st.on { color: var(--live); }
+h2.sec { font-size: clamp(24px, 3.4vw, 34px); margin: 0 0 8px; font-weight: 600; }
+.lead { color: var(--muted); margin: 0 0 22px; }
+.free { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.free div { background: var(--bg2); border: 1px solid var(--line); border-radius: 14px; padding: 12px 14px; display: flex; justify-content: space-between; gap: 10px; font-size: 14px; }
+.free b { color: var(--live); font-weight: 600; white-space: nowrap; }
+.follow { display: flex; align-items: center; gap: 10px; }
+.follow span { color: var(--text); font-weight: 600; margin-inline-end: 4px; }
+.follow a { width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line); background: var(--bg2); color: var(--text); display: inline-flex; align-items: center; justify-content: center; transition: background .15s, color .15s; }
+.follow a:hover { background: var(--accent); color: #1a120c; border-color: var(--accent); }
+.follow svg { width: 18px; height: 18px; }
+footer .wrap { align-items: center; }
+footer { border-top: 1px solid var(--line); padding: 26px 0 40px; color: var(--muted); font-size: 13px; }
+footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; }
+.flag { display: inline-block; font-size: 11px; color: #1a120c; background: var(--accent2); border-radius: 6px; padding: 0 6px; margin-inline-start: 6px; }
+
+@media (max-width: 820px) {
+  .moment .wrap { grid-template-columns: 1fr; gap: 26px; }
+  .moment:nth-of-type(even) .wrap > .copy { order: 0; }
+  .trio, .cards, .free { grid-template-columns: 1fr; }
+  .devices { grid-template-columns: 1fr 1fr; }
+  .stage { min-height: 0; }
+  .laptop .base { margin: 0 -10px; }
 }
-.bye { display: grid; gap: 10px; margin-top: 24px; max-width: 560px; }
-.bye label { display: flex; gap: 10px; align-items: center; padding: 12px 16px; border-radius: 14px; background: var(--panel); border: 1px solid var(--line); cursor: pointer; }
-.bye label.more { flex-direction: column; align-items: stretch; cursor: default; }
-.bye textarea { font: inherit; color: inherit; background: transparent; border: 1px solid var(--line); border-radius: 10px; padding: 10px; resize: vertical; }
-.bye input[type="radio"] { accent-color: var(--terracotta); }</style>
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+
+/* ---------- v4: visual first ---------- */
+.hero { padding: 56px 0 24px; }
+.hero h1 { margin-bottom: 12px; }
+.follow.top { justify-content: center; margin-top: 18px; }
+.devrow { display: flex; justify-content: center; align-items: flex-end; gap: 22px; margin: 40px auto 0; max-width: 1080px; flex-wrap: nowrap; }
+.devrow .phone { width: 150px; } .devrow .watch { width: 120px; border-radius: 30px; padding: 7px; } .devrow .watch .face { border-radius: 24px; }
+.devrow .laptop { max-width: 360px; } .devrow .tv { max-width: 380px; }
+.devrow .cap { font-size: 12px; }
+.pills { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; }
+.pills div { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 16px 12px; text-align: center; font-weight: 600; font-size: 15px; line-height: 1.5; }
+.pills svg { display: block; width: 28px; height: 28px; margin: 0 auto 8px; color: var(--accent2); }
+.moment { padding: 56px 0; }
+.moment h2 { margin-bottom: 8px; }
+.moment p { font-size: 18px; color: var(--text); opacity: .85; }
+.soonbox { display: none !important; } .soonbox-x { aspect-ratio: 1206 / 2622; width: min(250px, 42vw); border-radius: 38px; border: 2px dashed var(--line); display: flex; align-items: center; justify-content: center; text-align: center; color: var(--muted); padding: 24px; font-size: 14px; }
+.soonbox.wide { aspect-ratio: 16 / 10; width: 100%; max-width: 520px; border-radius: 18px; }
+@media (max-width: 820px) {
+  .devrow { flex-wrap: wrap; gap: 14px; } .devrow .laptop, .devrow .tv { max-width: 100%; width: 100%; } .devrow .phone { width: 120px; } .devrow .watch { width: 100px; }
+  .pills { grid-template-columns: 1fr 1fr; }
+}
+.moment .wrap:has(.soonbox) { grid-template-columns: 1fr; text-align: center; }
+.moment .wrap:has(.soonbox) > div:not(.copy) { display: none; }
+.moment .wrap:has(.soonbox) .feats { justify-content: center; }
+.moment:has(.soonbox) { padding: 44px 0; }
+html[dir="ltr"] .store span, html[dir="ltr"] .store b { text-align: left; }
+html[dir="ltr"] body { font-family: 'IBM Plex Sans Arabic', system-ui, sans-serif; }
+</style>
 </head>
-<body><header class="top"><div class="wrap">
-  <a class="mark" href="/en/"><img src="/assets/icon-128.png" alt="" width="36" height="36"><span>سكينة</span></a>
-  <nav><a href="#features">Features</a><a href="#everywhere">Get it</a><a href="#faq">FAQ</a><a class="lang" href="/" hreflang="ar">العربية</a></nav>
+<body>
+<header><div class="wrap">
+  <a class="logo ruq" href="#top" aria-label="Sakinah">سكينة</a>
+  <a class="lang" href="/" lang="ar" style="margin-inline-start:auto;margin-inline-end:16px;color:var(--muted);text-decoration:none;font-size:14px">العربية</a>
+  <a class="cta" href="#get">Add Sakinah to your browser</a>
 </div></header>
-<main>
-<div class="hero"><img class="hero-bg" src="/assets/hero-1600.webp" srcset="/assets/hero-640.webp 640w, /assets/hero-1080.webp 1080w, /assets/hero-1600.webp 1600w, /assets/hero-2200.webp 2200w" sizes="100vw" alt="" width="2200" height="1238" fetchpriority="high" decoding="async"><div class="wrap">
-  <h1>Sakinah</h1>
-  <div class="tag">With you, wherever you are</div>
-  <p class="lead">The Quran by the great reciters, the adhan on time, and the morning and evening adhkar with text and audio. On the TV at home, in your browser at work, and soon on your phone.</p>
-  <div class="cta">
-    <a class="btn" href="#everywhere">Get Sakinah</a>
-    <a class="btn ghost" href="#screens">Screenshots</a>
+
+<section class="hero" id="top"><div class="wrap">
+  <h1>Sakinah, with you all day long.</h1>
+  <p>Moving recitations from hundreds of reciters, the adhan in your favourite voice, and a sibha at your fingertips.</p>
+  <div class="get" id="get">
+    <a class="store" href="https://chromewebstore.google.com/detail/ijlckibeakfkmcfcpkkknmnjeclcpdbh?utm_source=sakinah-site">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="#db4437"/><path d="M24 2a22 22 0 0 1 19.05 11H24a11 11 0 0 0-9.53 5.5L5.94 13.06A22 22 0 0 1 24 2z" fill="#db4437"/><path d="M43.05 13A22 22 0 0 1 24 46l9.53-16.5A11 11 0 0 0 33.53 18.5 11 11 0 0 0 24 13z" fill="#fcc934"/><path d="M24 46A22 22 0 0 1 5.94 13.06l9.53 16.44A11 11 0 0 0 33.53 29.5z" fill="#0f9d58"/><circle cx="24" cy="24" r="9" fill="#fff"/><circle cx="24" cy="24" r="7" fill="#4285f4"/></svg>
+      <span><small>Add it free to</small><b>Chrome</b></span></a>
+    <a class="store" href="https://addons.mozilla.org/firefox/addon/sakinah-quran/">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="ff" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffbd4f"/><stop offset=".5" stop-color="#ff5634"/><stop offset="1" stop-color="#e31587"/></linearGradient></defs><circle cx="24" cy="25" r="20" fill="url(#ff)"/><circle cx="25" cy="27" r="11" fill="#5a2a8c"/><path d="M9 14c3-6 9-9 15-9-4 2-6 5-6 8 4-3 11-2 15 2-6-1-10 1-12 4-3 5 0 11 6 12-9 3-19-3-20-12 0-2 1-4 2-5z" fill="#ff8a16"/></svg>
+      <span><small>Add it free to</small><b>Firefox</b></span></a>
   </div>
-  <div class="pills"><span>Completely free</span><span>No ads</span><span>No account</span><span>Arabic & English</span></div>
-</div></div>
-<div class="devices">
-  <div class="tv"><div class="screen"><img src="/screens/en/home-800.webp" srcset="/screens/en/home-480.webp 480w, /screens/en/home-800.webp 800w, /screens/en/home-1280.webp 1280w" sizes="(max-width: 1032px) calc(100vw - 52px), 980px" alt="The home screen on a Friday morning: Surah Al-Kahf by Sheikh Mahmoud Khalil Al-Hussary, with the day’s prayer times." width="1280" height="720" loading="lazy" decoding="async"></div><div class="stand"></div></div>
-  <div class="pop"><img src="/screens/en/popup-380.webp" alt="The Chrome mini player: today’s prayer times, sections and what is playing" width="380" height="580" loading="lazy" decoding="async"></div>
-  <div class="phone"><img src="/screens/en/phone-360.webp" alt="The phone app design: your day from Fajr to Isha, and what is playing now" width="360" height="779" loading="lazy" decoding="async"><span>Coming soon</span></div>
-</div>
-<p class="caption">The home screen on a Friday morning: Surah Al-Kahf by Sheikh Mahmoud Khalil Al-Hussary, with the day’s prayer times.</p>
-
-<section id="features"><div class="wrap">
-  <div class="eyebrow">Features</div>
-  <h2>From Fajr to Isha</h2>
-  <p class="intro">Pick your city once. Sakinah knows its prayer times and plays what fits each part of the day.</p>
-  <div class="features"><div class="card star"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2c.6 2 2 3 2 5a2 2 0 0 1-4 0c0-2 1.4-3 2-5zM6 10h12l-1 2H7zM7 13h10v9H7zm3 3v6h4v-6a2 2 0 0 0-4 0z"/></svg></div><h3>The adhan on time, then back to the recitation</h3><p>The adhan plays over whatever you’re listening to, and the recitation picks up where it stopped. Fajr has its own adhan voice.</p></div><div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z"/></svg></div><h3>Morning and evening adhkar</h3><p>From Hisn al-Muslim. Each dhikr shows in clear Arabic with its audio and the book’s English translation, and moves on by itself.</p></div><div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm7 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM9 13c-3.3 0-7 1.7-7 4v3h14v-3c0-2.3-3.7-4-7-4zm7 0c-.5 0-1 0-1.5.1 1.5 1 2.5 2.3 2.5 3.9v3h5v-3c0-2.3-3.1-4-6-4z"/></svg></div><h3>The great reciters</h3><p>Abdul Basit, Minshawi, Husary, Al-Banna, Mustafa Ismail and the imams of the Two Holy Mosques, with complete mushafs in several narrations.</p></div><div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M7 2h2v2h6V2h2v2h3v18H4V4h3zm-1 7v11h12V9z"/></svg></div><h3>Al-Kahf on Fridays, takbeerat at Eid</h3><p>Surah Al-Kahf plays every Friday and the takbeerat on the days of Eid, so you don’t have to remember.</p></div><div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM6.3 6.3l1.4 1.4a6 6 0 0 0 0 8.6l-1.4 1.4a8 8 0 0 1 0-11.4zm11.4 0a8 8 0 0 1 0 11.4l-1.4-1.4a6 6 0 0 0 0-8.6z"/></svg></div><h3>The Haramain live</h3><p>Masjid al-Haram and Masjid an-Nabawi from the official channels. Watch, or just listen while you work.</p></div><div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M11 3h2v10l3.5-3.5 1.4 1.4L12 16.8l-5.9-5.9 1.4-1.4L11 13zM4 19h16v2H4z"/></svg></div><h3>Offline</h3><p>Download your favourite recitations and listen when the connection drops.</p></div></div>
-  <h2 style="margin-top:80px">A day with Sakinah</h2>
-  <div class="day"><div><b>Fajr</b><span>The adhan, then the morning adhkar</span></div><div><b>The day</b><span>Recitations all day</span></div><div><b>Friday</b><span>Surah Al-Kahf</span></div><div><b>Asr</b><span>The evening adhkar</span></div><div><b>Eid</b><span>The takbeerat</span></div></div>
-</div></section>
-
-<section id="everywhere"><div class="wrap">
-  <div class="eyebrow">Get it</div>
-  <h2>At home, at work, and on the go</h2>
-  <p class="intro">The browser version is out now. The TV apps are in store review, and we are building the phone app.</p>
-  <div class="places"><div class="place">
-    <div class="ic"><svg viewBox="0 0 24 24"><path d="M7 2h10a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 3v13h10V5zm4 14.2h2v1.3h-2z"/></svg></div>
-    <h3>On your phone</h3>
-    <p>The adhan, the adhkar and your recitations when you’re out of the house. We’re working on it now.</p>
-    <ul><li><span><svg class="logo" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.4395 5.5586c-.675 1.1664-1.352 2.3318-2.0274 3.498-.0366-.0155-.0742-.0286-.1113-.043-1.8249-.6957-3.484-.8-4.42-.787-1.8551.0185-3.3544.4643-4.2597.8203-.084-.1494-1.7526-3.021-2.0215-3.4864a1.1451 1.1451 0 0 0-.1406-.1914c-.3312-.364-.9054-.4859-1.379-.203-.475.282-.7136.9361-.3886 1.5019 1.9466 3.3696-.0966-.2158 1.9473 3.3593.0172.031-.4946.2642-1.3926 1.0177C2.8987 12.176.452 14.772 0 18.9902h24c-.119-1.1108-.3686-2.099-.7461-3.0683-.7438-1.9118-1.8435-3.2928-2.7402-4.1836a12.1048 12.1048 0 0 0-2.1309-1.6875c.6594-1.122 1.312-2.2559 1.9649-3.3848.2077-.3615.1886-.7956-.0079-1.1191a1.1001 1.1001 0 0 0-.8515-.5332c-.5225-.0536-.9392.3128-1.0488.5449zm-.0391 8.461c.3944.5926.324 1.3306-.1563 1.6503-.4799.3197-1.188.0985-1.582-.4941-.3944-.5927-.324-1.3307.1563-1.6504.4727-.315 1.1812-.1086 1.582.4941zM7.207 13.5273c.4803.3197.5506 1.0577.1563 1.6504-.394.5926-1.1038.8138-1.584.4941-.48-.3197-.5503-1.0577-.1563-1.6504.4008-.6021 1.1087-.8106 1.584-.4941z"/></svg>Android</span><em class="soon">Coming soon</em></li><li><span><svg class="logo" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>iPhone</span><em class="soon">Coming soon</em></li></ul>
-  </div><div class="place">
-    <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 5h18v12H3zm2 2v8h14V7zM8 19h8v2H8z"/></svg></div>
-    <h3>On your TV</h3>
-    <p>Recitation the whole house can hear, the adhan on the big screen, and adhkar in large text everyone can read.</p>
-    <ul><li><span><svg class="logo lg" viewBox="0 8.3 24 7.4" role="img" aria-label="LG"><path d="M14.522 14.078h3.27v1.33h-4.847v-6.83h1.577v5.5zm6.74-1.274h1.284v1.195c-.236.09-.698.18-1.137.18-1.42 0-1.893-.721-1.893-2.186 0-1.398.45-2.221 1.869-2.221.791 0 1.24.248 1.612.722l.982-.903c-.6-.855-1.646-1.114-2.629-1.114-2.208 0-3.368 1.205-3.368 3.504 0 2.288 1.047 3.528 3.358 3.528 1.06 0 2.096-.27 2.66-.665V11.53h-2.739v1.274zM5.291 6.709a5.29 5.29 0 1 1 0 10.582 5.291 5.291 0 1 1 0-10.582m3.16 8.457a4.445 4.445 0 0 0 1.31-3.161v-.242l-.22.001H6.596v.494h2.662l-.001.015a3.985 3.985 0 0 1-3.965 3.708 3.95 3.95 0 0 1-2.811-1.165 3.952 3.952 0 0 1-1.164-2.811c0-1.061.414-2.059 1.164-2.81a3.951 3.951 0 0 1 2.81-1.164l.252.003v-.495l-.251-.003a4.475 4.475 0 0 0-4.47 4.469c0 1.194.465 2.316 1.309 3.161a4.444 4.444 0 0 0 3.16 1.31 4.444 4.444 0 0 0 3.162-1.31m-2.91-1.297V9.644H5.04v4.72h1.556v-.495H5.543zm-1.265-3.552a.676.676 0 1 0-.675.674.676.676 0 0 0 .675-.674"/></svg></span><em class="review">In review</em></li><li><span><svg class="logo samsung" viewBox="0 9.6 24 4.8" role="img" aria-label="Samsung"><path d="M19.8166 10.2808l.0459 2.6934h-.023l-.7793-2.6934h-1.2837v3.3925h.8481l-.0458-2.785h.023l.8366 2.785h1.2264v-3.3925zm-16.149 0l-.6418 3.427h.9284l.4699-3.1175h.0229l.4585 3.1174h.9169l-.6304-3.4269zm5.1805 0l-.424 2.6132h-.023l-.424-2.6132H6.5788l-.0688 3.427h.8596l.023-3.0832h.0114l.573 3.0831h.8711l.5731-3.083h.023l.0228 3.083h.8596l-.0802-3.4269zm-7.2664 2.4527c.0343.0802.0229.1949.0114.2522-.0229.1146-.1031.2292-.3324.2292-.2177 0-.3438-.126-.3438-.3095v-.3323H0v.2636c0 .7679.6074.9971 1.2493.9971.6189 0 1.1346-.2178 1.2149-.7794.0458-.298.0114-.4928 0-.5616-.1605-.722-1.467-.9283-1.5588-1.3295-.0114-.0688-.0114-.1375 0-.1834.023-.1146.1032-.2292.3095-.2292.2063 0 .321.126.321.3095v.2063h.8595v-.2407c0-.745-.6762-.8596-1.1576-.8596-.6074 0-1.1117.2063-1.2034.7564-.023.149-.0344.2866.0114.4585.1376.7106 1.364.9169 1.5358 1.3524m11.152 0c.0343.0803.0228.1834.0114.2522-.023.1146-.1032.2292-.3324.2292-.2178 0-.3438-.126-.3438-.3095v-.3323h-.917v.2636c0 .7564.596.9857 1.2379.9857.6189 0 1.1232-.2063 1.2034-.7794.0459-.298.0115-.4814 0-.5616-.1375-.7106-1.4327-.9284-1.5243-1.318-.0115-.0688-.0115-.1376 0-.1835.0229-.1146.1031-.2292.3094-.2292.1948 0 .321.126.321.3095v.2063h.848v-.2407c0-.745-.6647-.8596-1.146-.8596-.6075 0-1.1004.1948-1.192.7564-.023.149-.023.2866.0114.4585.1376.7106 1.341.9054 1.513 1.3524m2.8882.4585c.2407 0 .3094-.1605.3323-.2522.0115-.0343.0115-.0917.0115-.126v-2.533h.871v2.4642c0 .0688 0 .1948-.0114.2292-.0573.6419-.5616.8482-1.192.8482-.6303 0-1.1346-.2063-1.192-.8482 0-.0344-.0114-.1604-.0114-.2292v-2.4642h.871v2.533c0 .0458 0 .0916.0115.126 0 .0917.0688.2522.3095.2522m7.1518-.0344c.2522 0 .3324-.1605.3553-.2522.0115-.0343.0115-.0917.0115-.126v-.4929h-.3553v-.5043H24v.917c0 .0687 0 .1145-.0115.2292-.0573.6303-.596.8481-1.2034.8481-.6075 0-1.1461-.2178-1.2034-.8481-.0115-.1147-.0115-.1605-.0115-.2293v-1.444c0-.0574.0115-.172.0115-.2293.0802-.6419.596-.8482 1.2034-.8482s1.1347.2063 1.2034.8482c.0115.1031.0115.2292.0115.2292v.1146h-.8596v-.1948s0-.0803-.0115-.1261c-.0114-.0802-.0802-.2521-.3438-.2521-.2521 0-.321.1604-.3438.2521-.0115.0458-.0115.1032-.0115.1605v1.5702c0 .0458 0 .0916.0115.126 0 .0917.0917.2522.3323.2522"/></svg></span><em class="review">In review · US first</em></li></ul>
-  </div><div class="place">
-    <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm6.9 6h-3a15 15 0 0 0-1.3-3.6A8 8 0 0 1 18.9 8zM12 4.1c.8 1.1 1.5 2.4 1.9 3.9h-3.8c.4-1.5 1.1-2.8 1.9-3.9zM4.3 14a8 8 0 0 1 0-4h3.4a16 16 0 0 0 0 4zm.8 2h3a15 15 0 0 0 1.3 3.6A8 8 0 0 1 5.1 16zm3-8h-3a8 8 0 0 1 4.3-3.6C8.8 5.5 8.4 6.7 8.1 8zM12 19.9c-.8-1.1-1.5-2.4-1.9-3.9h3.8c-.4 1.5-1.1 2.8-1.9 3.9zM14.3 14H9.7a14 14 0 0 1 0-4h4.6a14 14 0 0 1 0 4zm.3 5.6c.6-1.1 1-2.3 1.3-3.6h3a8 8 0 0 1-4.3 3.6zM16.3 14a16 16 0 0 0 0-4h3.4a8 8 0 0 1 0 4z"/></svg></div>
-    <h3>In your browser</h3>
-    <p>A small player that keeps going in the background while you work, and calls the adhan on time with a notification.</p>
-    <ul><li><a href="https://chromewebstore.google.com/detail/ijlckibeakfkmcfcpkkknmnjeclcpdbh" rel="noopener"><svg class="logo" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C8.21 0 4.831 1.757 2.632 4.501l3.953 6.848A5.454 5.454 0 0 1 12 6.545h10.691A12 12 0 0 0 12 0zM1.931 5.47A11.943 11.943 0 0 0 0 12c0 6.012 4.42 10.991 10.189 11.864l3.953-6.847a5.45 5.45 0 0 1-6.865-2.29zm13.342 2.166a5.446 5.446 0 0 1 1.45 7.09l.002.001h-.002l-5.344 9.257c.206.01.413.016.621.016 6.627 0 12-5.373 12-12 0-1.54-.29-3.011-.818-4.364zM12 16.364a4.364 4.364 0 1 1 0-8.728 4.364 4.364 0 0 1 0 8.728Z"/></svg>Chrome</a><em class="live">Available · also Edge and Brave</em></li><li><a href="https://addons.mozilla.org/firefox/addon/sakinah-quran/" rel="noopener"><svg class="logo" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.824 7.287c.008 0 .004 0 0 0zm-2.8-1.4c.006 0 .003 0 0 0zm16.754 2.161c-.505-1.215-1.53-2.528-2.333-2.943.654 1.283 1.033 2.57 1.177 3.53l.002.02c-1.314-3.278-3.544-4.6-5.366-7.477-.091-.147-.184-.292-.273-.446a3.545 3.545 0 01-.13-.24 2.118 2.118 0 01-.172-.46.03.03 0 00-.027-.03.038.038 0 00-.021 0l-.006.001a.037.037 0 00-.01.005L15.624 0c-2.585 1.515-3.657 4.168-3.932 5.856a6.197 6.197 0 00-2.305.587.297.297 0 00-.147.37c.057.162.24.24.396.17a5.622 5.622 0 012.008-.523l.067-.005a5.847 5.847 0 011.957.222l.095.03a5.816 5.816 0 01.616.228c.08.036.16.073.238.112l.107.055a5.835 5.835 0 01.368.211 5.953 5.953 0 012.034 2.104c-.62-.437-1.733-.868-2.803-.681 4.183 2.09 3.06 9.292-2.737 9.02a5.164 5.164 0 01-1.513-.292 4.42 4.42 0 01-.538-.232c-1.42-.735-2.593-2.121-2.74-3.806 0 0 .537-2 3.845-2 .357 0 1.38-.998 1.398-1.287-.005-.095-2.029-.9-2.817-1.677-.422-.416-.622-.616-.8-.767a3.47 3.47 0 00-.301-.227 5.388 5.388 0 01-.032-2.842c-1.195.544-2.124 1.403-2.8 2.163h-.006c-.46-.584-.428-2.51-.402-2.913-.006-.025-.343.176-.389.206-.406.29-.787.616-1.136.974-.397.403-.76.839-1.085 1.303a9.816 9.816 0 00-1.562 3.52c-.003.013-.11.487-.19 1.073-.013.09-.026.181-.037.272a7.8 7.8 0 00-.069.667l-.002.034-.023.387-.001.06C.386 18.795 5.593 24 12.016 24c5.752 0 10.527-4.176 11.463-9.661.02-.149.035-.298.052-.448.232-1.994-.025-4.09-.753-5.844z"/></svg>Firefox</a><em class="live">Available</em></li></ul>
-  </div></div>
-</div></section>
-
-<section id="screens"><div class="wrap">
-  <h2>On the big screen</h2>
-  <div class="shots"><figure><img src="/screens/en/adhkar-800.webp" srcset="/screens/en/adhkar-480.webp 480w, /screens/en/adhkar-800.webp 800w, /screens/en/adhkar-1280.webp 1280w" sizes="(max-width: 700px) 92vw, 360px" alt="Morning adhkar: each dhikr with its text, audio and translation" width="1280" height="720" loading="lazy" decoding="async"><figcaption>Morning adhkar: each dhikr with its text, audio and translation</figcaption></figure><figure><img src="/screens/en/reciter-800.webp" srcset="/screens/en/reciter-480.webp 480w, /screens/en/reciter-800.webp 800w, /screens/en/reciter-1280.webp 1280w" sizes="(max-width: 700px) 92vw, 360px" alt="A whole mushaf by Sheikh Al-Hussary, in several narrations" width="1280" height="720" loading="lazy" decoding="async"><figcaption>A whole mushaf by Sheikh Al-Hussary, in several narrations</figcaption></figure><figure><img src="/screens/en/adhan-800.webp" srcset="/screens/en/adhan-480.webp 480w, /screens/en/adhan-800.webp 800w, /screens/en/adhan-1280.webp 1280w" sizes="(max-width: 700px) 92vw, 360px" alt="It’s time for the adhan" width="1280" height="720" loading="lazy" decoding="async"><figcaption>It’s time for the adhan</figcaption></figure></div>
-</div></section>
-
-<section id="privacy"><div class="wrap">
-  <div class="promise">
-    <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2l8 3v6c0 5-3.4 9.4-8 11-4.6-1.6-8-6-8-11V5zm-1 13l6-6-1.4-1.4L11 12.2 8.4 9.6 7 11z"/></svg></div>
-    <div><h2>Your privacy</h2><p class="intro">No account, no ads, and we don’t sell data. Prayer times are worked out on your device. We collect anonymous usage stats that you can turn off in Settings, and on Firefox and Samsung we only send them if you say yes. <a href="/en/privacy/">Privacy policy</a></p></div>
+  <div class="soon">
+    <span class="lbl">Coming soon to</span>
+    <span class="chip"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.2-1.7-3-1.9-3.6-2-1.5-.2-3 .9-3.8.9s-2-.9-3.3-.9C6.1 7 4.5 8 3.7 9.6c-1.8 3.1-.5 7.7 1.3 10.2.8 1.2 1.8 2.6 3.1 2.5 1.3-.1 1.7-.8 3.3-.8s2 .8 3.3.8c1.4 0 2.2-1.2 3-2.5.9-1.4 1.3-2.7 1.3-2.8 0 0-2.6-1-2.6-4.4zM14 5.4c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1 .1 2.1-.6 2.8-1.4z"/></svg>iPhone · Apple Watch</span>
+    <span class="chip"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#34a853" d="M3.6 2.3 13.5 12l-9.9 9.7c-.4-.2-.6-.6-.6-1.1V3.4c0-.5.2-.9.6-1.1z"/><path fill="#fbbc04" d="m17 8.6-3.5 3.4L17 15.4l3.9-2.2c.8-.5.8-1.7 0-2.2z"/><path fill="#ea4335" d="M3.6 21.7 13.5 12l3.5 3.4-11.6 6.6c-.6.3-1.3.2-1.8-.3z"/><path fill="#4285f4" d="M3.6 2.3c.5-.5 1.2-.6 1.8-.3L17 8.6 13.5 12z"/></svg>Android</span>
+    <span class="chip"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 21h8M12 17v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>LG · Samsung TVs</span>
+    <span class="chip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 11l1.6-4.2A2 2 0 0 1 8.5 5.5h7a2 2 0 0 1 1.9 1.3L19 11M4 11h16v5a1 1 0 0 1-1 1h-1.5M4 11v5a1 1 0 0 0 1 1h1.5M7.5 17h9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="7.5" cy="14" r="1.2" fill="currentColor"/><circle cx="16.5" cy="14" r="1.2" fill="currentColor"/></svg>CarPlay</span>
+  </div>
+  <div class="promise">Completely free · No ads · No account · Works offline</div>
+  <div class="devrow">
+    <div><div class="phone"><video src="/media/iphone-khashia-play.mp4" poster="/media/iphone-khashia-play.jpg" autoplay muted loop playsinline></video></div><div class="cap">Phone</div></div>
+    <div><div class="watch"><span class="crown"></span><div class="face"><video src="/media/watch-adhkar-crown.mp4" poster="/media/watch-adhkar-crown.jpg" autoplay muted loop playsinline></video></div></div><div class="cap">Watch</div></div>
+    <div style="flex:1;max-width:360px"><div class="laptop"><div class="scr desk">
+    <div class="doc"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="bar"><span></span><span></span><span></span><div class="ico">س<em class="badge">24</em></div></div>
+    <img class="pop" src="/media/ext-popup.jpg" alt="Sakinah’s toolbar window">
+    <div class="notif"><span class="ic">س</span><span><b>It’s time for the Asr adhan</b>Riyadh · 2:49 PM</span></div>
+  </div><div class="base"></div></div><div class="cap">Browser</div></div>
+    <div style="flex:1;max-width:380px"><div class="tv"><div class="scr"><video src="/media/tv-adhan-resume.mp4" poster="/media/tv-adhan-resume.jpg" autoplay muted loop playsinline></video></div><div class="foot"></div></div><div class="cap">TV</div></div>
+  </div>
+  <div class="follow top"><span>Follow Sakinah</span>
+    <a href="https://x.com/sakinahtime" aria-label="X"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg></a>
+    <a href="https://www.instagram.com/sakinahtime/" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.6" cy="6.4" r="1.3" fill="currentColor"/></svg></a>
+    <a href="https://www.tiktok.com/@thesakinahtime" aria-label="TikTok"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+    <a href="https://www.youtube.com/@sakinah-time" aria-label="YouTube"><svg viewBox="0 0 24 24"><rect x="1.5" y="4.5" width="21" height="15" rx="4.5" fill="currentColor"/><path d="M10 8.8v6.4l5.6-3.2z" fill="var(--bg)"/></svg></a>
   </div>
 </div></section>
 
-<section id="faq"><div class="wrap">
-  <h2>Questions</h2>
-  <div class="faq"><details><summary>Is Sakinah free?</summary><p>Yes. It’s free, with no ads and no subscriptions.</p></details><details><summary>Where does Sakinah run?</summary><p>In Chrome right now, and it also works in Edge and Brave. Firefox and the LG and Samsung TV apps are in store review, and we’re building the Android and iPhone app.</p></details><details><summary>Which TVs are supported?</summary><p>LG smart TVs with webOS 4 (2018) or later, and Samsung smart TVs with Tizen 4 (2018) or later. On Samsung it launches in the US first, then in other countries.</p></details><details><summary>Is there a phone app?</summary><p>We’re building one for Android and iPhone, and we’ll announce it here when it’s ready.</p></details><details><summary>Where do the recitations come from?</summary><p>From recitations published on TvQuran.com. Sakinah is independent and not affiliated with the site; the adhkar text, audio and translation are from Hisn al-Muslim.</p></details><details><summary>How are prayer times calculated?</summary><p>On your device, for your city, with your country’s official method (Umm al-Qura in Saudi Arabia). You can change the city and method in Settings.</p></details><details><summary>Does it work offline?</summary><p>Yes, for recitations you’ve downloaded, prayer times and the adhkar text. The live broadcast needs a connection.</p></details><details><summary>How do I send an idea or report a problem?</summary><p>In the app: Settings → “Send feedback”, or email sakinah@jazary.com. We read every message.</p></details></div>
+<section class="why"><div class="wrap">
+  <h2 class="sec">What makes Sakinah different</h2>
+  <div class="pills">
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3c3 4 3 14 0 18M12 3c-3 4-3 14 0 18M4 12h16"/></svg>Calm, never an ad beside a verse</div>
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="5" width="13" height="9" rx="1.5"/><rect x="17" y="8" width="5" height="10" rx="1.5"/><path d="M5 18h7"/></svg>With you at home, at work and in the car</div>
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5c3-1 6-1 8 1v14c-2-2-5-2-8-1zM20 5c-3-1-6-1-8 1v14c2-2 5-2 8-1z"/></svg>About 370 reciters, many riwayat</div>
+    <div><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="4" r="2"/><circle cx="18" cy="8" r="2"/><circle cx="18" cy="15" r="2"/><circle cx="12" cy="20" r="2"/><circle cx="6" cy="15" r="2"/><circle cx="6" cy="8" r="2" opacity=".35"/></svg>Read or listen, the sibha counts</div>
+    <div><svg viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="12" width="2.4" height="8" rx="1"/><rect x="6.6" y="8" width="2.4" height="12" rx="1"/><rect x="10.2" y="10" width="2.4" height="10" rx="1"/><rect x="13.8" y="6" width="2.4" height="14" rx="1"/><rect x="17.4" y="9" width="2.4" height="11" rx="1"/></svg>Your consistency, just for you</div>
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></svg>Your adhan, times and language, your way</div>
+  </div>
 </div></section>
-</main>
+<section class="moment"><div class="wrap">
+  <div class="copy"><div class="time">Early morning <i>· Phone</i></div><h2>Before your day begins, a calm recitation.</h2><p>One press, and moving recitations flow from reciter to reciter.</p><ul class="feats"><li>570+ recitations</li><li>About 370 reciters</li><li>Listen offline</li></ul><div class="where">Coming soon to iPhone · Android</div></div>
+  <div><div class="switch" data-group="m1"><button class="on" data-os="iphone">iPhone</button><button data-os="android">Android</button></div><div class="stage"><div class="phone"><video data-clip="khashia-play" autoplay muted loop playsinline></video></div></div></div>
+</div></section>
+<section class="moment"><div class="wrap">
+  <div class="copy"><div class="time">The adhan <i>· Every device</i></div><h2>A voice you choose, times that match your mosque.</h2><p>The adhan sounds even when your phone is on silent. Six voices, plus three for Fajr.</p><ul class="feats"><li>Even on silent</li><li>Your country’s official method</li><li>Adjust each prayer by minutes</li></ul><div class="where" style="margin-top:4px">On silent: iPhone with iOS 26 or later, once turned on.</div></div>
+  <div><div class="switch" data-group="m2"><button class="on" data-os="iphone">iPhone</button><button data-os="android">Android</button></div><div class="stage"><div><div class="phone sm"><video data-clip="adhan-voice" autoplay muted loop playsinline></video></div><div class="cap">Adhan voice</div></div><div><div class="phone sm"><video data-clip="prayer-adjust" autoplay muted loop playsinline></video></div><div class="cap">Maghrib, two minutes later</div></div></div></div>
+</div></section>
+<section class="moment"><div class="wrap">
+  <div class="copy"><div class="time">At work <i>· Browser</i></div><h2>In the middle of work, the Asr adhan reaches you.</h2><p>Even with Sakinah’s tab closed. After the adhan, the recitation carries on.</p><ul class="feats"><li>Adhan with the tab closed</li><li>Adhan, then the recitation resumes</li><li>Quran minutes on the toolbar icon</li></ul><div class="where"><span class="on">Available now on Chrome · Firefox</span></div></div>
+  <div><div class="stage"><div class="laptop"><div class="scr desk">
+    <div class="doc"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="bar"><span></span><span></span><span></span><div class="ico">س<em class="badge">24</em></div></div>
+    <img class="pop" src="/media/ext-popup.jpg" alt="Sakinah’s toolbar window">
+    <div class="notif"><span class="ic">س</span><span><b>It’s time for the Asr adhan</b>Riyadh · 2:49 PM</span></div>
+  </div><div class="base"></div></div></div></div>
+</div></section>
+<section class="moment"><div class="wrap">
+  <div class="copy"><div class="time">Asr <i>· Watch</i></div><h2>Your watch taps your wrist: time for the evening adhkar.</h2><p>Turn the crown and the beads fill, or double-tap your index finger and thumb to count one-handed.</p><ul class="feats"><li>A sibha on the crown</li><li>Count with a double tap</li><li>Prayers and adhkar from your wrist</li></ul><div class="where">Coming soon to Apple Watch, with the iPhone app</div><div class="where" style="margin-top:4px">Double tap works on Apple Watch Series 9 · Ultra 2 and later.</div></div>
+  <div><div class="stage"><div><div class="watch"><span class="crown"></span><div class="face"><video src="/media/watch-adhkar-crown.mp4" poster="/media/watch-adhkar-crown.jpg" autoplay muted loop playsinline></video></div></div><div class="cap">The crown fills the beads</div></div></div></div>
+</div></section>
+<section class="moment"><div class="wrap">
+  <div class="copy"><div class="time">Evening at home <i>· TV</i></div><h2>After a long day, the Quran fills the house.</h2><p>The Isha adhan sounds, then the surah carries on where it stopped.</p><ul class="feats"><li>A calm listening screen</li><li>Adhkar in large type</li><li>Live from Makkah and Madinah, no ads</li></ul><div class="where">Coming soon to LG · Samsung TVs</div></div>
+  <div><div class="switch" data-group="tv"><button class="on" data-tv="tv-adhan-resume">Adhan, then recitation</button><button data-tv="tv-listening">Listening screen</button></div><div class="stage"><div class="tv"><div class="scr"><video id="tvv" src="/media/tv-adhan-resume.mp4" poster="/media/tv-adhan-resume.jpg" autoplay muted loop playsinline></video></div><div class="foot"></div></div></div></div>
+</div></section>
+<section class="moment"><div class="wrap">
+  <div class="copy"><div class="time">On the road <i>· Car</i></div><h2>On the road, Quran and adhkar at one press.</h2><p>Morning adhkar on time, Al-Kahf on Friday, and your recitation where you left it.</p><ul class="feats"><li>Your reciters first</li><li>Adhkar and ruqyah in audio</li><li>Downloads work offline</li></ul><div class="where">Coming soon to CarPlay, with the iPhone app</div></div>
+  <div><div class="stage"><div class="soonbox wide"></div></div></div>
+</div></section>
+<section class="moment"><div class="wrap">
+  <div class="copy"><div class="time">Your way <i>· Adhkar</i></div><h2>Adhkar that fit your moment, with a sibha that counts along.</h2><p>With time to spare, read and press; on the go, listen and repeat.</p><ul class="feats"><li>Read or listen</li><li>From Hisn al-Muslim</li></ul></div>
+  <div><div class="switch" data-group="way"><button class="on" data-way="iphone">iPhone</button><button data-way="android">Android</button><button data-way="browser">Browser</button></div><div class="stage" id="waystage"></div></div>
+</div></section>
+<section class="moment"><div class="wrap">
+  <div class="copy"><div class="time">Your day <i>· Phone</i></div><h2>Your day’s prayers and adhkar, in order.</h2><p>Mark each prayer as you pray it, and press “Done” after each dhikr.</p><div class="where">Coming soon to iPhone · Android</div></div>
+  <div><div class="stage" id="tl"><div class="soonbox"></div></div></div>
+</div></section>
+<section class="moment"><div class="wrap">
+  <div class="copy"><div class="time">Your week <i>· Phone and Watch</i></div><h2>Your consistency, just for you.</h2><p>Your prayers and adhkar over the last seven days, from your phone and watch.</p><ul class="feats"><li>The last seven days</li><li>In congregation or at its start</li><li>From your watch to your phone</li></ul><div class="where">Coming soon to iPhone · Android · Apple Watch</div></div>
+  <div><div class="stage" id="wk"><div class="soonbox"></div></div></div>
+</div></section>
+<section class="moment"><div class="wrap">
+  <div class="copy"><div class="time">On your phone’s screen <i>· Phone</i></div><h2>Your day and your week on your phone’s screen.</h2><p>What fits this hour, and your week, without opening the app.</p><ul class="feats"><li>iPhone lock screen</li><li>Listen at one press</li></ul><div class="where">Coming soon to iPhone · Android</div></div>
+  <div><div class="stage" id="ws"><div class="soonbox"></div></div></div>
+</div></section>
+<section class="moment"><div class="wrap">
+  <div class="copy"><div class="time">Made to fit <i>· Settings</i></div><h2>Settings you tune to your needs.</h2><p>Prayer times, adhan voice, adhkar times and your reciter, in Arabic or English.</p><ul class="feats"><li>Adhkar times your way</li><li>Arabic and English</li></ul></div>
+  <div><div class="stage"><div class="phone android"><video src="/media/android-adhan-voice.mp4" poster="/media/android-adhan-voice.jpg" autoplay muted loop playsinline></video></div></div></div>
+</div></section>
+
+
+
+
+<section class="small"><div class="wrap">
+  <h2 class="sec">Everything in it is free</h2>
+  <p class="lead">No ads, no subscription, no account.</p>
+  <div class="free">
+    <div><span>Every adhan voice</span><b>Free</b></div>
+    <div><span>Offline listening</span><b>Free</b></div>
+    <div><span>The Apple Watch app</span><b>Free</b></div>
+    <div><span>Your week and consistency</span><b>Free</b></div>
+    <div><span>Your day on your phone’s screen</span><b>Free</b></div>
+    <div><span>About 370 reciters, and ruqyah in 24 voices</span><b>Free</b></div>
+  </div>
+</div></section>
+<section class="small" id="faq"><div class="wrap">
+  <h2 class="sec">Questions</h2>
+  <div class="faq">
+    <details open><summary>Will the times match my mosque?</summary><p>Times use your country’s official method, such as Umm al-Qura in Saudi Arabia or the Egyptian General Authority of Survey in Egypt. If your mosque differs by a minute or two, adjust that prayer by minutes.</p></details>
+    <details><summary>What do you know about me?</summary><p>No account, no name, no email. Your city is estimated from your connection to calculate prayer times, or you can choose it yourself. We receive anonymous usage data to improve the app, and we never sell or share it.</p></details>
+    <details><summary>Where do the recitations and adhkar come from?</summary><p>Recitations are published on TvQuran.com; Sakinah is an independent app, not affiliated with it. Adhkar text and audio come from Hisn al-Muslim, and the live broadcast from Makkah and Madinah comes from the official channels.</p></details>
+    <details><summary>Does it work offline?</summary><p>Yes, for what you download: downloaded recitations play offline, and prayer times are calculated on your device. The live broadcast and recitations you haven’t downloaded need the internet.</p></details>
+    <details><summary>When is it coming to phones and TVs?</summary><p>The browser extension is available now on Chrome · Firefox. Phones (iPhone · Android), the watch and TVs (LG · Samsung) are coming soon; we announce each one on @sakinahtime.</p></details>
+    <details><summary>How do I send a suggestion or report a problem?</summary><p>In any app, open Settings and press “Share your feedback”, then choose an idea, a request or a problem; you can attach the last error. The browser extension has the same link at the bottom of its window, and on the phone you just shake it. Or email us: <a href="mailto:sakinah@jazary.com">sakinah@jazary.com</a>. We read every message.</p></details>
+    <details><summary>Which TVs does Sakinah work on?</summary><p>LG · Samsung TVs from 2018 onwards, running webOS 4.0 · Tizen 4.0 or later. Both apps are in review at the two stores and coming soon.</p></details>
+    <details><summary>Do I need an account or to sign up?</summary><p>No account, no sign-up, no long questions. Open Sakinah and start. In the browser there’s a short optional setup for language, city and adhan, which you can skip.</p></details>
+    <details><summary>Does the adhan sound when my phone is on silent, or the app is closed?</summary><p>Yes, even with the app closed, once you turn on “Adhan even on silent”, or per prayer from the bell in your day. On iPhone (iOS 26 or later) you hear the opening of the adhan, about 28 seconds, and the rest when you open the app. On Android you hear it in full. Phone apps are coming soon.</p></details>
+    <details><summary>Can I choose the reciter and the muezzin?</summary><p>Yes. Choose from about 370 reciters, six adhan voices and three for Fajr. You can also pick the reciter for Al-Kahf on Fridays, and the ruqyah voice from 24 reciters.</p></details>
+    <details><summary>I live outside the Arab world. Are the times right for me?</summary><p>Yes. Sakinah picks your country’s official method automatically, including those of France, Russia, Jordan, Tunisia, Algeria and Morocco. You can choose your city and method yourself and adjust each prayer by minutes. High-latitude countries get special handling.</p></details>
+    <details><summary>Is it available in English?</summary><p>Yes, Sakinah is in Arabic and English.</p></details>
+    <details><summary>Which browsers does the extension work on?</summary><p>Chrome · Firefox · Brave.</p></details>
+    <details><summary>Where are my marked prayers and adhkar kept?</summary><p>Only on your phone and watch, with no account linking them to the TV or browser.</p></details>
+    <details><summary>The adhan didn’t sound on time. What should I do?</summary><p>In Settings, check your city, calculation method and minute adjustments. In the browser, make sure notifications are allowed for Sakinah. On the TV, make sure its clock is right; Sakinah warns you if it isn’t. If it still happens, tell us through “Share your feedback”.</p></details>
+  </div>
+</div></section>
 <footer><div class="wrap">
-  <div>Sakinah is an independent app. Recitations are published on TvQuran.com; adhkar from Hisn al-Muslim.</div>
-  <nav><a href="/en/privacy/">Privacy</a><a href="mailto:sakinah@jazary.com">sakinah@jazary.com</a><a href="/">العربية</a></nav>
-  <div class="credit">Background photo: “21-224-5054 NNP Synevyr” — Rbrechko, <a href="https://commons.wikimedia.org/wiki/File:21-224-5054_NNP_Synevyr_RB_18.jpg">Wikimedia Commons</a>, CC BY-SA 4.0.</div>
+  <div class="follow"><span>Follow Sakinah</span>
+    <a href="https://x.com/sakinahtime" aria-label="X"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg></a>
+    <a href="https://www.instagram.com/sakinahtime/" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.6" cy="6.4" r="1.3" fill="currentColor"/></svg></a>
+    <a href="https://www.tiktok.com/@thesakinahtime" aria-label="TikTok"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+    <a href="https://www.youtube.com/@sakinah-time" aria-label="YouTube"><svg viewBox="0 0 24 24"><rect x="1.5" y="4.5" width="21" height="15" rx="4.5" fill="currentColor"/><path d="M10 8.8v6.4l5.6-3.2z" fill="var(--bg)"/></svg></a>
+  </div>
+  <span>Sakinah by Jazary · Recitations from TvQuran.com, adhkar from Hisn al-Muslim · <a href="/en/privacy/">Privacy</a> · <a href="mailto:sakinah@jazary.com">sakinah@jazary.com</a></span>
 </div></footer>
+<script>
+// Phone clips: one name per moment, iPhone or Android.
+function setPhones(group, os) {
+  var sec = document.querySelector('[data-group="' + group + '"]').closest('.moment');
+  sec.querySelectorAll('video[data-clip]').forEach(function (v) {
+    // Android's تلاوات خاشعة clip is being re-recorded (it opened on the home page): its reciter clip until then.
+    var clip = os === 'android' && v.dataset.clip === 'khashia-play' ? 'reciter-play' : v.dataset.clip;
+    var n = os + '-' + clip; v.poster = '/media/' + n + '.jpg'; v.src = '/media/' + n + '.mp4'; v.play().catch(function () {});
+    v.closest('.phone').classList.toggle('android', os === 'android');
+  });
+}
+document.querySelectorAll('.switch').forEach(function (sw) {
+  sw.addEventListener('click', function (e) {
+    var b = e.target.closest('button'); if (!b) return;
+    sw.querySelectorAll('button').forEach(function (x) { x.classList.toggle('on', x === b); });
+    if (b.dataset.os) setPhones(sw.dataset.group, b.dataset.os);
+    if (b.dataset.tv) { var v = document.getElementById('tvv'); v.poster = '/media/' + b.dataset.tv + '.jpg'; v.src = '/media/' + b.dataset.tv + '.mp4'; v.play().catch(function () {}); }
+    if (b.dataset.way) way(b.dataset.way);
+  });
+});
+setPhones('m1', 'iphone'); setPhones('m2', 'iphone');
+
+// «Your way»: the sibha on the phone or in the browser.
+function way(k) {
+  var st = document.getElementById('waystage');
+  st.innerHTML = k === 'browser'
+    ? '<div class="laptop"><div class="scr"><video src="/media/browser-adhkar-sibha.mp4" poster="/media/browser-adhkar-sibha.jpg" autoplay muted loop playsinline></video></div><div class="base"></div></div>'
+    : '<div class="phone' + (k === 'android' ? ' android' : '') + '"><video src="/media/' + k + '-adhkar-sibha.mp4" poster="/media/' + k + '-adhkar-sibha.jpg" autoplay muted loop playsinline></video></div>';
+}
+way('iphone');
+
+</script>
 </body>
 </html>
