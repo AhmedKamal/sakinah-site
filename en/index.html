@@ -239,7 +239,7 @@ html[dir="ltr"] body { font-family: 'IBM Plex Sans Arabic', system-ui, sans-seri
     <img class="pop" src="/media/ext-popup.jpg" alt="Sakinah’s toolbar window">
     <div class="notif"><span class="ic">س</span><span><b>It’s time for the Asr adhan</b>Riyadh · 2:49 PM</span></div>
   </div><div class="base"></div></div><div class="cap">Browser</div></div>
-    <div style="flex:1;max-width:380px"><div class="tv"><div class="scr"><video src="/media/tv-adhan-resume.mp4" poster="/media/tv-adhan-resume.jpg" autoplay muted loop playsinline></video></div><div class="foot"></div></div><div class="cap">TV</div></div>
+    <div style="flex:1;max-width:380px"><div class="tv"><div class="scr"><video src="/media/en/tv-adhan-resume.mp4" poster="/media/en/tv-adhan-resume.jpg" autoplay muted loop playsinline></video></div><div class="foot"></div></div><div class="cap">TV</div></div>
   </div>
   <div class="follow top"><span>Follow Sakinah</span>
     <a href="https://x.com/sakinahtime" aria-label="X"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg></a>
@@ -283,7 +283,7 @@ html[dir="ltr"] body { font-family: 'IBM Plex Sans Arabic', system-ui, sans-seri
 </div></section>
 <section class="moment"><div class="wrap">
   <div class="copy"><div class="time">Evening at home <i>· TV</i></div><h2>After a long day, the Quran fills the house.</h2><p>The Isha adhan sounds, then the surah carries on where it stopped.</p><ul class="feats"><li>A calm listening screen</li><li>Adhkar in large type</li><li>Live from Makkah and Madinah, no ads</li></ul><div class="where">Coming soon to LG · Samsung TVs</div></div>
-  <div><div class="switch" data-group="tv"><button class="on" data-tv="tv-adhan-resume">Adhan, then recitation</button><button data-tv="tv-listening">Listening screen</button></div><div class="stage"><div class="tv"><div class="scr"><video id="tvv" src="/media/tv-adhan-resume.mp4" poster="/media/tv-adhan-resume.jpg" autoplay muted loop playsinline></video></div><div class="foot"></div></div></div></div>
+  <div><div class="switch" data-group="tv"><button class="on" data-tv="tv-adhan-resume">Adhan, then recitation</button><button data-tv="tv-listening">Listening screen</button></div><div class="stage"><div class="tv"><div class="scr"><video id="tvv" src="/media/en/tv-adhan-resume.mp4" poster="/media/en/tv-adhan-resume.jpg" autoplay muted loop playsinline></video></div><div class="foot"></div></div></div></div>
 </div></section>
 <section class="moment"><div class="wrap">
   <div class="copy"><div class="time">On the road <i>· Car</i></div><h2>On the road, Quran and adhkar at one press.</h2><p>Morning adhkar on time, Al-Kahf on Friday, and your recitation where you left it.</p><ul class="feats"><li>Your reciters first</li><li>Adhkar and ruqyah in audio</li><li>Downloads work offline</li></ul><div class="where">Coming soon to CarPlay, with the iPhone app</div></div>
@@ -370,7 +370,7 @@ document.querySelectorAll('.switch').forEach(function (sw) {
     var b = e.target.closest('button'); if (!b) return;
     sw.querySelectorAll('button').forEach(function (x) { x.classList.toggle('on', x === b); });
     if (b.dataset.os) setPhones(sw.dataset.group, b.dataset.os);
-    if (b.dataset.tv) { var v = document.getElementById('tvv'); v.poster = '/media/' + b.dataset.tv + '.jpg'; v.src = '/media/' + b.dataset.tv + '.mp4'; v.play().catch(function () {}); }
+    if (b.dataset.tv) { var v = document.getElementById('tvv'); v.poster = '/media/en/' + b.dataset.tv + '.jpg'; v.src = '/media/en/' + b.dataset.tv + '.mp4'; v.play().catch(function () {}); }
     if (b.dataset.way) way(b.dataset.way);
   });
 });
@@ -380,7 +380,7 @@ setPhones('m1', 'iphone'); setPhones('m2', 'iphone');
 function way(k) {
   var st = document.getElementById('waystage');
   st.innerHTML = k === 'browser'
-    ? '<div class="laptop"><div class="scr"><video src="/media/browser-adhkar-sibha.mp4" poster="/media/browser-adhkar-sibha.jpg" autoplay muted loop playsinline></video></div><div class="base"></div></div>'
+    ? '<div class="laptop"><div class="scr"><video src="/media/en/browser-adhkar-sibha.mp4" poster="/media/en/browser-adhkar-sibha.jpg" autoplay muted loop playsinline></video></div><div class="base"></div></div>'
     : '<div class="phone' + (k === 'android' ? ' android' : '') + '"><video src="/media/' + k + '-adhkar-sibha.mp4" poster="/media/' + k + '-adhkar-sibha.jpg" autoplay muted loop playsinline></video></div>';
 }
 way('iphone');
