@@ -184,7 +184,7 @@ section { padding-top: 72px; }
     fetch("https://eu.i.posthog.com/capture/", { method: 'POST', headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ api_key: "phc_vK7SE8xNMLPxNw5XEEXssPDvQjCx3nNQbLWnaNGj3GaM", event: 'uninstall_reason', properties: props }) })
       .then(function (r) { if (!r.ok) throw r; f.hidden = true; msg.textContent = "وصلتنا إجابتك، جزاك الله خيراً."; })
-      .catch(function () { msg.textContent = "تعذر الإرسال. يمكنك مراسلتنا على sakinah@jazary.com"; f.querySelector('button').disabled = false; });
+      .catch(function () { msg.textContent = "تعذّر الإرسال. يمكنك مراسلتنا على sakinah@jazary.com"; f.querySelector('button').disabled = false; });
   };
 })();
 </script><footer><div class="wrap">

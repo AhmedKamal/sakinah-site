@@ -164,7 +164,7 @@ section { padding-top: 72px; }
 (function () {
   var q = new URLSearchParams(location.search), ext = q.get('ext') || '', token = q.get('t') || '';
   var msg = document.getElementById('msg'), go = document.getElementById('go');
-  var T = {"wait":"جارٍ تحديد موقعك…","ok":"تم ✓ ضبطنا مواقيت الصلاة على موقعك. يمكنك إغلاق هذه الصفحة.","denied":"لم يُسمح بمعرفة الموقع. يمكنك اختيار مدينتك من إعدادات سكينة بدلاً من ذلك.","fail":"تعذر الوصول إلى إضافة سكينة. افتح سكينة ← الإعدادات ← الموقع ← «موقعي الدقيق» وحاول مجدداً."};
+  var T = {"wait":"جارٍ تحديد موقعك…","ok":"تم ✓ ضبطنا مواقيت الصلاة على موقعك. يمكنك إغلاق هذه الصفحة.","denied":"لم يُسمح بمعرفة الموقع. يمكنك اختيار مدينتك من إعدادات سكينة بدلاً من ذلك.","fail":"تعذّر الوصول إلى إضافة سكينة. افتح سكينة ← الإعدادات ← الموقع ← «موقعي الدقيق» وحاول مجدداً."};
   // Keep the extension id and token in the address bar's query only; carry the other-language link along.
   var other = document.querySelector('a.lang'); if (other) other.search = location.search;
   if (!/^[a-p]{32}$/.test(ext) || !window.chrome || !chrome.runtime || !chrome.runtime.sendMessage) { msg.textContent = T.fail; go.disabled = true; return; }

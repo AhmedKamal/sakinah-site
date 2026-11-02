@@ -3,21 +3,85 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sakinah | Adhan, Quran and adhkar, all day</title>
-<meta name="description" content="Sakinah, with you all day long: hundreds of reciters, the adhan in your favourite voice even on silent, and a tasbih at your fingertips. Free, no ads, no account.">
+<title>Sakinah: Prayer Times, Adhan, Daily Adhkar &amp; Quran</title>
+<meta name="description" content="Free, no ads. Adhkar with a tasbih that counts with you, hundreds of Quran reciters. Now on Chrome · Firefox; soon on phones, with adhan even on silent.">
 <link rel="canonical" href="https://sakinah.jazary.com/en/">
 <link rel="alternate" hreflang="ar" href="https://sakinah.jazary.com/">
 <link rel="alternate" hreflang="en" href="https://sakinah.jazary.com/en/">
+<link rel="alternate" hreflang="x-default" href="https://sakinah.jazary.com/">
 <link rel="icon" href="/favicon.png">
 <link rel="apple-touch-icon" href="/assets/icon-128.png">
 <meta name="theme-color" content="#15110d">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Sakinah | Adhan, Quran and adhkar, all day">
-<meta property="og:description" content="Sakinah, with you all day long: hundreds of reciters, the adhan in your favourite voice even on silent, and a tasbih at your fingertips. Free, no ads, no account.">
-<meta property="og:image" content="https://sakinah.jazary.com/assets/og.jpg">
+<meta property="og:title" content="Sakinah: Prayer Times, Adhan, Daily Adhkar &amp; Quran">
+<meta property="og:description" content="Free, no ads. Adhkar with a tasbih that counts with you, hundreds of Quran reciters. Now on Chrome · Firefox; soon on phones, with adhan even on silent.">
+<meta property="og:image" content="https://sakinah.jazary.com/assets/og-en.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Sakinah">
 <meta property="og:url" content="https://sakinah.jazary.com/en/">
+<meta property="og:site_name" content="Sakinah">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ar_SA">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@sakinahtime">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://sakinah.jazary.com/#org",
+   "name": "Jazary",
+   "url": "https://sakinah.jazary.com/",
+   "email": "sakinah@jazary.com",
+   "sameAs": [
+    "https://x.com/sakinahtime",
+    "https://www.instagram.com/sakinahtime/",
+    "https://www.tiktok.com/@thesakinahtime",
+    "https://www.youtube.com/@sakinah-time"
+   ]
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://sakinah.jazary.com/#site",
+   "url": "https://sakinah.jazary.com/",
+   "name": "Sakinah · سكينة",
+   "inLanguage": [
+    "ar",
+    "en"
+   ],
+   "publisher": {
+    "@id": "https://sakinah.jazary.com/#org"
+   }
+  },
+  {
+   "@type": "SoftwareApplication",
+   "name": "Sakinah",
+   "alternateName": "سكينة",
+   "url": "https://sakinah.jazary.com/en/",
+   "inLanguage": "en",
+   "description": "Free, no ads. Adhkar with a tasbih that counts with you, hundreds of Quran reciters. Now on Chrome · Firefox; soon on phones, with adhan even on silent.",
+   "applicationCategory": "LifestyleApplication",
+   "applicationSubCategory": "Browser extension",
+   "operatingSystem": "Chrome, Firefox",
+   "image": "https://sakinah.jazary.com/assets/og-en.jpg",
+   "installUrl": [
+    "https://chromewebstore.google.com/detail/ijlckibeakfkmcfcpkkknmnjeclcpdbh",
+    "https://addons.mozilla.org/firefox/addon/sakinah-quran/"
+   ],
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   },
+   "publisher": {
+    "@id": "https://sakinah.jazary.com/#org"
+   }
+  }
+ ]
+}
+</script>
 <style>
 @font-face { font-family: 'Aref Ruqaa'; font-weight: 700; font-display: swap; src: url(/assets/fonts/ArefRuqaa-700-arabic.woff2) format('woff2'); }
 @font-face { font-family: 'IBM Plex Sans Arabic'; font-weight: 400; font-display: swap; src: url(/assets/fonts/IBMPlexSansArabic-400-arabic.woff2) format('woff2'); unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF; }
@@ -399,6 +463,28 @@ way('iphone');
 
 // The watch clip at one bead a second, with the double-tap icon beside it.
 document.querySelectorAll('.watchpinch video').forEach(function (v) { v.playbackRate = 0.7; v.addEventListener('play', function () { v.playbackRate = 0.7; }); });
+// Visit counts, cookieless: nothing is stored in the browser, no person profiles, no session recording.
+// Pageview with the ?from= / utm source, and clicks on the store buttons. PostHog EU.
+(function () {
+  if (navigator.doNotTrack === '1' || /^(localhost|127\.)/.test(location.hostname)) return;
+  var id = 's' + Math.random().toString(36).slice(2) + Date.now().toString(36), q = new URLSearchParams(location.search);
+  var ref = document.referrer, rd = ''; try { rd = ref ? new URL(ref).hostname : '$direct'; } catch (e) {}
+  function send(event, props) {
+    var p = { $current_url: location.origin + location.pathname, $pathname: location.pathname, $host: location.host, $referrer: ref || '$direct', $referring_domain: rd || '$direct',
+      $session_id: id, $process_person_profile: false, $lib: 'sakinah-site', lang: document.documentElement.lang, site: 'sakinah.jazary.com' };
+    ['from', 'utm_source', 'utm_medium', 'utm_campaign'].forEach(function (k) { if (q.get(k)) p[k] = q.get(k).slice(0, 60); });
+    for (var k in props) p[k] = props[k];
+    var body = JSON.stringify({ api_key: 'phc_vK7SE8xNMLPxNw5XEEXssPDvQjCx3nNQbLWnaNGj3GaM', event: event, distinct_id: id, properties: p });
+    if (!(navigator.sendBeacon && navigator.sendBeacon('https://eu.i.posthog.com/i/v0/e/', new Blob([body], { type: 'text/plain' }))))
+      fetch('https://eu.i.posthog.com/i/v0/e/', { method: 'POST', body: body, keepalive: true, headers: { 'Content-Type': 'text/plain' } }).catch(function () {});
+  }
+  send('$pageview', { title: document.title });
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href]'); if (!a) return;
+    var s = /chromewebstore/.test(a.href) ? 'chrome' : /addons\.mozilla/.test(a.href) ? 'firefox' : /apps\.apple/.test(a.href) ? 'app_store' : /play\.google/.test(a.href) ? 'google_play' : '';
+    if (s) send('store_click', { store: s, place: a.closest('section') ? (a.closest('section').id || a.closest('section').className) : 'header' });
+  });
+})();
 </script>
 </body>
 </html>
