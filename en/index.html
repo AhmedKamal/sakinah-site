@@ -205,6 +205,14 @@ html[dir="ltr"] .store span, html[dir="ltr"] .store b { text-align: left; }
 .dtv { width: min(380px, 80vw); border-radius: 18px; display: block; }
 .stage { flex-wrap: wrap; }
 @media (max-width: 820px) { .dtv { width: 100%; max-width: 340px; } }
+.watchpinch { display: flex; align-items: center; gap: 22px; justify-content: center; }
+.pinchwrap { position: relative; width: 104px; }
+.pinch { width: 104px; display: block; animation: pinch 1s infinite ease-in-out; }
+.pinchwrap i { position: absolute; left: 27%; top: 54%; width: 22px; height: 22px; margin: -11px; border: 2px solid var(--text); border-radius: 50%; opacity: 0; animation: ring 1s infinite ease-out; }
+.pinchwrap i + i { animation-delay: .15s; }
+@keyframes pinch { 0%, 20% { transform: scale(1); } 25% { transform: scale(.93); } 30% { transform: scale(1); } 37% { transform: scale(.93); } 42%, 100% { transform: scale(1); } }
+@keyframes ring { 0%, 22% { opacity: 0; transform: scale(.5); } 26% { opacity: .9; transform: scale(1); } 45%, 100% { opacity: 0; transform: scale(2); } }
+@media (prefers-reduced-motion: reduce) { .pinch, .pinchwrap i { animation: none; } }
 </style>
 </head>
 <body>
@@ -282,7 +290,7 @@ html[dir="ltr"] .store span, html[dir="ltr"] .store b { text-align: left; }
 </div></section>
 <section class="moment"><div class="wrap">
   <div class="copy"><div class="time">Asr <i>· Watch</i></div><h2>Your watch taps your wrist: time for the evening adhkar.</h2><p>Turn the crown to fill the beads, or double-tap finger and thumb, one-handed.</p><ul class="feats"><li>Tasbih on the crown</li><li>Count with Double Tap</li><li>On-wrist prayers and adhkar</li></ul><div class="where">Coming soon to Apple Watch, with the iPhone app</div><div class="where" style="margin-top:4px">Double Tap works on Apple Watch Series 9, Ultra 2 and later.</div></div>
-  <div><div class="stage"><div><div class="watch"><span class="crown"></span><div class="face"><video src="/media/watch-adhkar-crown.mp4" poster="/media/watch-adhkar-crown.jpg" autoplay muted loop playsinline></video></div></div><div class="cap">The crown fills the beads</div></div></div></div>
+  <div><div class="stage"><div><div class="watchpinch"><div class="watch"><span class="crown"></span><div class="face"><video src="/media/watch-adhkar-crown.mp4" poster="/media/watch-adhkar-crown.jpg" autoplay muted loop playsinline></video></div></div><div class="pinchwrap" aria-hidden="true"><img class="pinch" src="/media/hand-pinch.png" alt=""><i></i><i></i></div></div><div class="cap">Turn the crown, or double-tap</div></div></div></div>
 </div></section>
 <section class="moment"><div class="wrap">
   <div class="copy"><div class="time">Evening at home <i>· TV</i></div><h2>After a long day, the Quran fills the house.</h2><p>At Isha the adhan plays, then the surah picks up right where it paused.</p><ul class="feats"><li>A calm listening screen</li><li>Adhkar in large type</li><li>Live Haramain, ad-free</li></ul><div class="where">Coming soon to LG · Samsung TVs</div></div>
@@ -388,6 +396,9 @@ function way(k) {
 }
 way('iphone');
 
+
+// The watch clip at one bead a second, with the double-tap icon beside it.
+document.querySelectorAll('.watchpinch video').forEach(function (v) { v.playbackRate = 0.7; v.addEventListener('play', function () { v.playbackRate = 0.7; }); });
 </script>
 </body>
 </html>
