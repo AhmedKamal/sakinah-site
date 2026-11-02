@@ -159,6 +159,8 @@ header .wrap { display: flex; align-items: center; justify-content: space-betwee
 .tv { width: 100%; max-width: 560px; }
 .tv .scr { aspect-ratio: 16 / 9; background: #000; border: 8px solid #0b0b0b; border-radius: 8px; overflow: hidden; box-shadow: 0 30px 80px rgba(0,0,0,.55); }
 .tv .scr video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.car { width: 100%; max-width: 560px; padding: 10px; background: linear-gradient(#1c1c1e, #0b0b0b); border-radius: 26px; box-shadow: 0 30px 80px rgba(0,0,0,.55); }
+.car img { display: block; width: 100%; aspect-ratio: 1640 / 1126; object-fit: cover; border-radius: 18px; }
 .tv .foot { width: 26%; height: 10px; margin: 0 auto; background: #1a1a1a; border-radius: 0 0 8px 8px; }
 .cap { text-align: center; color: var(--muted); font-size: 13px; margin-top: 10px; }
 
@@ -360,7 +362,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
 </div></section>
 <section class="moment"><div class="wrap">
   <div class="copy"><div class="time">في الطريق <i>· السيارة</i></div><h2>في طريقك، قرآنٌ وأذكار بضغطة واحدة.</h2><p>أذكار الصباح في وقتها، وسورة الكهف يوم الجمعة، وتلاوتك من حيث توقّفت.</p><ul class="feats"><li>قرّاؤك في أوّل القائمة</li><li>الأذكار والرقية بالصوت</li><li>تلاواتك المحمّلة بلا إنترنت</li></ul><div class="where">قريباً على CarPlay، مع تطبيق iPhone</div></div>
-  <div><div class="stage"><div class="soonbox wide">صور سكينة على شاشة السيارة قيد التصوير</div></div></div>
+  <div><div class="switch" data-group="car"><button class="on" data-car="now">الآن</button><button data-car="reciters">القرّاء</button><button data-car="adhkar">الأذكار</button><button data-car="downloads">التحميلات</button><button data-car="nowplaying">قيد التشغيل</button></div><div class="stage"><div class="car"><img id="carimg" src="/media/carplay-now.jpg" alt="سكينة على شاشة CarPlay" loading="lazy"></div></div></div>
 </div></section>
 <section class="moment"><div class="wrap">
   <div class="copy"><div class="time">على طريقتك <i>· الأذكار</i></div><h2>أذكارك على حالك، والسبحة تعدّ معك.</h2><p>حين يتّسع وقتك تقرأ وتضغط، وفي طريقك تستمع وتردّد.</p><ul class="feats"><li>قراءة أو استماع</li><li>من «حصن المسلم»</li></ul></div>
@@ -445,9 +447,11 @@ document.querySelectorAll('.switch').forEach(function (sw) {
     if (b.dataset.os) setPhones(sw.dataset.group, b.dataset.os);
     if (b.dataset.tv) { var v = document.getElementById('tvv'); v.poster = '/media/' + b.dataset.tv + '.jpg'; v.src = '/media/' + b.dataset.tv + '.mp4'; v.play().catch(function () {}); }
     if (b.dataset.way) way(b.dataset.way);
+    if (b.dataset.car) document.getElementById('carimg').src = '/media/carplay-' + b.dataset.car + '.jpg';
   });
 });
 setPhones('m1', 'iphone'); setPhones('m2', 'iphone');
+['reciters', 'adhkar', 'downloads', 'nowplaying'].forEach(function (n) { new Image().src = '/media/carplay-' + n + '.jpg'; });
 
 // «على طريقتك»: the sibha on the phone or in the browser.
 function way(k) {
