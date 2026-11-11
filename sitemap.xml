@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url><loc>https://sakinah.jazary.com/</loc></url>
   <url><loc>https://sakinah.jazary.com/en/</loc></url>
   <url><loc>https://sakinah.jazary.com/privacy/</loc></url>
   <url><loc>https://sakinah.jazary.com/en/privacy/</loc></url>
+  <url><loc>https://sakinah.jazary.com/chrome/</loc><xhtml:link rel="alternate" hreflang="ar" href="https://sakinah.jazary.com/chrome/"/><xhtml:link rel="alternate" hreflang="en" href="https://sakinah.jazary.com/en/chrome/"/></url>
+  <url><loc>https://sakinah.jazary.com/en/chrome/</loc><xhtml:link rel="alternate" hreflang="ar" href="https://sakinah.jazary.com/chrome/"/><xhtml:link rel="alternate" hreflang="en" href="https://sakinah.jazary.com/en/chrome/"/></url>
+  <url><loc>https://sakinah.jazary.com/tv/</loc><xhtml:link rel="alternate" hreflang="ar" href="https://sakinah.jazary.com/tv/"/><xhtml:link rel="alternate" hreflang="en" href="https://sakinah.jazary.com/en/tv/"/></url>
+  <url><loc>https://sakinah.jazary.com/en/tv/</loc><xhtml:link rel="alternate" hreflang="ar" href="https://sakinah.jazary.com/tv/"/><xhtml:link rel="alternate" hreflang="en" href="https://sakinah.jazary.com/en/tv/"/></url>
 </urlset>
