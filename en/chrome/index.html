@@ -163,6 +163,7 @@ section { padding-top: 72px; }
 .store small::after { content: " "; }
 .feat .lead { font-size: 21px; color: var(--sand); margin-top: 14px; }
 .feat .cta { display: flex; flex-wrap: wrap; gap: 14px; margin: 28px 0 8px; }
+.feat .cta:has(> :nth-child(4)) .store { flex: 1 1 calc(50% - 7px); }
 .feat ol { color: var(--muted); padding-inline-start: 1.4em; } .feat ol li { margin: 6px 0; }
 .feat details { border-top: 1px solid var(--line); padding: 14px 0; } .feat details:last-of-type { border-bottom: 1px solid var(--line); }
 .feat summary { cursor: pointer; color: var(--sand); font-weight: 600; } .feat details p { margin-top: 8px; }
@@ -258,10 +259,10 @@ section { padding-top: 72px; }
   <p class="lead">Your workday happens at a screen. Sakinah plays the adhan on time even with its tab closed, and keeps your recitation going in the background. Free, with no ads and no account.</p>
   <div class="cta">
     <a class="store" href="https://chromewebstore.google.com/detail/ijlckibeakfkmcfcpkkknmnjeclcpdbh?utm_source=sakinah-site">
-      <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="#db4437"/><path d="M24 2a22 22 0 0 1 19.05 11H24a11 11 0 0 0-9.53 5.5L5.94 13.06A22 22 0 0 1 24 2z" fill="#db4437"/><path d="M43.05 13A22 22 0 0 1 24 46l9.53-16.5A11 11 0 0 0 33.53 18.5 11 11 0 0 0 24 13z" fill="#fcc934"/><path d="M24 46A22 22 0 0 1 5.94 13.06l9.53 16.44A11 11 0 0 0 33.53 29.5z" fill="#0f9d58"/><circle cx="24" cy="24" r="9" fill="#fff"/><circle cx="24" cy="24" r="7" fill="#4285f4"/></svg>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="4" width="19" height="16" rx="3" fill="none" stroke="#1a120c" stroke-width="1.8"/><path d="M2.5 8.6h19" stroke="#1a120c" stroke-width="1.8"/><circle cx="5.6" cy="6.3" r="1" fill="#c8774a"/><circle cx="8.4" cy="6.3" r="1" fill="#c8774a"/><path d="M9 14.2l2.2 2.2 4-4.4" fill="none" stroke="#c8774a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
       <span><small>Add it free to</small><b>Chrome</b></span></a>
     <a class="store" href="https://addons.mozilla.org/firefox/addon/sakinah-quran/">
-      <svg viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="ff" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffbd4f"/><stop offset=".5" stop-color="#ff5634"/><stop offset="1" stop-color="#e31587"/></linearGradient></defs><circle cx="24" cy="25" r="20" fill="url(#ff)"/><circle cx="25" cy="27" r="11" fill="#5a2a8c"/><path d="M9 14c3-6 9-9 15-9-4 2-6 5-6 8 4-3 11-2 15 2-6-1-10 1-12 4-3 5 0 11 6 12-9 3-19-3-20-12 0-2 1-4 2-5z" fill="#ff8a16"/></svg>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="4" width="19" height="16" rx="3" fill="none" stroke="#1a120c" stroke-width="1.8"/><path d="M2.5 8.6h19" stroke="#1a120c" stroke-width="1.8"/><circle cx="5.6" cy="6.3" r="1" fill="#c8774a"/><circle cx="8.4" cy="6.3" r="1" fill="#c8774a"/><path d="M9 14.2l2.2 2.2 4-4.4" fill="none" stroke="#c8774a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
       <span><small>Add it free to</small><b>Firefox</b></span></a>
   </div>
 
@@ -292,10 +293,10 @@ section { padding-top: 72px; }
   </ol>
   <div class="cta">
     <a class="store" href="https://chromewebstore.google.com/detail/ijlckibeakfkmcfcpkkknmnjeclcpdbh?utm_source=sakinah-site">
-      <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="#db4437"/><path d="M24 2a22 22 0 0 1 19.05 11H24a11 11 0 0 0-9.53 5.5L5.94 13.06A22 22 0 0 1 24 2z" fill="#db4437"/><path d="M43.05 13A22 22 0 0 1 24 46l9.53-16.5A11 11 0 0 0 33.53 18.5 11 11 0 0 0 24 13z" fill="#fcc934"/><path d="M24 46A22 22 0 0 1 5.94 13.06l9.53 16.44A11 11 0 0 0 33.53 29.5z" fill="#0f9d58"/><circle cx="24" cy="24" r="9" fill="#fff"/><circle cx="24" cy="24" r="7" fill="#4285f4"/></svg>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="4" width="19" height="16" rx="3" fill="none" stroke="#1a120c" stroke-width="1.8"/><path d="M2.5 8.6h19" stroke="#1a120c" stroke-width="1.8"/><circle cx="5.6" cy="6.3" r="1" fill="#c8774a"/><circle cx="8.4" cy="6.3" r="1" fill="#c8774a"/><path d="M9 14.2l2.2 2.2 4-4.4" fill="none" stroke="#c8774a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
       <span><small>Add it free to</small><b>Chrome</b></span></a>
     <a class="store" href="https://addons.mozilla.org/firefox/addon/sakinah-quran/">
-      <svg viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="ff" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffbd4f"/><stop offset=".5" stop-color="#ff5634"/><stop offset="1" stop-color="#e31587"/></linearGradient></defs><circle cx="24" cy="25" r="20" fill="url(#ff)"/><circle cx="25" cy="27" r="11" fill="#5a2a8c"/><path d="M9 14c3-6 9-9 15-9-4 2-6 5-6 8 4-3 11-2 15 2-6-1-10 1-12 4-3 5 0 11 6 12-9 3-19-3-20-12 0-2 1-4 2-5z" fill="#ff8a16"/></svg>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="4" width="19" height="16" rx="3" fill="none" stroke="#1a120c" stroke-width="1.8"/><path d="M2.5 8.6h19" stroke="#1a120c" stroke-width="1.8"/><circle cx="5.6" cy="6.3" r="1" fill="#c8774a"/><circle cx="8.4" cy="6.3" r="1" fill="#c8774a"/><path d="M9 14.2l2.2 2.2 4-4.4" fill="none" stroke="#c8774a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
       <span><small>Add it free to</small><b>Firefox</b></span></a>
   </div>
 
@@ -307,7 +308,7 @@ section { padding-top: 72px; }
   <details><summary>Is the extension free? What do you know about me?</summary><p>Everything in it is free, with no ads, no subscription and no account. Your approximate city is used to calculate prayer times. We receive anonymous usage data, which you can turn off in Settings, and we don't sell your data.</p></details>
 
   <h2>More about Sakinah</h2>
-  <p class="more"><a href="/en/">Sakinah</a><a href="/en/tv/">Sakinah for smart TVs</a></p>
+  <p class="more"><a href="/en/">Sakinah</a><a href="/en/tv/">Sakinah for smart TVs</a><a href="/en/apple-watch/">Sakinah for Apple Watch</a><a href="/en/carplay/">Sakinah in CarPlay</a><a href="/en/ruqyah/">Ruqyah audio</a><a href="/en/adhkar/">Morning & evening adhkar</a></p>
 </main><footer><div class="wrap">
   <div class="follow"><span>Follow Sakinah</span>
     <a href="https://x.com/sakinahtime" aria-label="X"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg></a>
@@ -316,7 +317,7 @@ section { padding-top: 72px; }
     <a href="https://www.youtube.com/@sakinah-time" aria-label="YouTube"><svg viewBox="0 0 24 24"><rect x="1.5" y="4.5" width="21" height="15" rx="4.5" fill="currentColor"/><path d="M10 8.8v6.4l5.6-3.2z" fill="var(--bg)"/></svg></a>
   </div>
   <span>Sakinah by Jazary · Recitations from TvQuran.com, adhkar from Hisn al-Muslim · <a href="/en/chrome/">Sakinah for Chrome</a> · <a href="/en/tv/">Sakinah for smart TVs</a> · <a href="/en/privacy/">Privacy</a> · <a href="mailto:sakinah@jazary.com">sakinah@jazary.com</a></span>
-  <div class="credit">Chrome is a trademark of Google LLC; Firefox of Mozilla; LG and Samsung of their respective owners. Sakinah is not affiliated with them.</div>
+  <div class="credit">Chrome, Android and Google Play are trademarks of Google LLC; Firefox of Mozilla; iPhone, Apple Watch, CarPlay and TestFlight of Apple Inc.; LG and Samsung of their respective owners. Sakinah is not affiliated with them.</div>
 </div></footer>
 <script>
 // Visit counts, cookieless: nothing is stored in the browser, no person profiles, no session recording.
