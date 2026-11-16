@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sakinah for Android · Beta</title>
+<meta name="description" content="Install the Sakinah Android beta from Google Play in three steps, with the Google account on your phone. Free, no ads, nothing to sign up for.">
+<link rel="canonical" href="https://sakinah.jazary.com/en/android/">
+<link rel="alternate" hreflang="ar" href="https://sakinah.jazary.com/android/">
+<link rel="alternate" hreflang="en" href="https://sakinah.jazary.com/en/android/">
+<link rel="icon" href="/favicon.png">
+<link rel="apple-touch-icon" href="/assets/icon-128.png">
+<meta name="theme-color" content="#17120e">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sakinah for Android · Beta">
+<meta property="og:description" content="Install the Sakinah Android beta from Google Play in three steps, with the Google account on your phone. Free, no ads, nothing to sign up for.">
+<meta property="og:image" content="https://sakinah.jazary.com/assets/og.jpg">
+<meta property="og:url" content="https://sakinah.jazary.com/en/android/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="/assets/fonts/ArefRuqaa-700-arabic.woff2" as="font" type="font/woff2" crossorigin>
+<style>@font-face { font-family: 'Ruqaa'; font-weight: 700; font-display: swap; src: url(/assets/fonts/ArefRuqaa-700-arabic.woff2) format('woff2'); }
+@font-face { font-family: 'Plex'; font-weight: 400; font-display: swap; src: url(/assets/fonts/IBMPlexSansArabic-400-arabic.woff2) format('woff2'); unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFC, U+200C-200E; }
+@font-face { font-family: 'Plex'; font-weight: 400; font-display: swap; src: url(/assets/fonts/IBMPlexSansArabic-400-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+2000-206F; }
+@font-face { font-family: 'Plex'; font-weight: 600; font-display: swap; src: url(/assets/fonts/IBMPlexSansArabic-600-arabic.woff2) format('woff2'); unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFC, U+200C-200E; }
+@font-face { font-family: 'Plex'; font-weight: 600; font-display: swap; src: url(/assets/fonts/IBMPlexSansArabic-600-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+2000-206F; }
+:root { --ink: #17120e; --panel: #221a14; --sand: #f2e8d5; --bright: #fbf3e3; --muted: rgba(242,232,213,.72); --faint: rgba(242,232,213,.5); --line: rgba(242,232,213,.12); --amber: #e0a872; --terracotta: #c8774a; --focus: #a35a33; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { background: var(--ink); color: var(--sand); }
+body { font: 400 18px/1.75 'Plex', system-ui, -apple-system, 'Segoe UI', sans-serif; -webkit-font-smoothing: antialiased; background: radial-gradient(900px 600px at 50% -10%, rgba(200,119,74,.22), transparent 70%), var(--ink); min-height: 100vh; }
+html[lang="en"] body { line-height: 1.65; }
+.wrap { width: min(640px, 100% - 32px); margin-inline: auto; }
+.top { display: flex; align-items: center; justify-content: space-between; padding: 18px 0; }
+.mark { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.mark img { width: 36px; height: 36px; border-radius: 9px; }
+.mark span { font: 700 26px/1 'Ruqaa', serif; color: #ead9b8; }
+.lang { padding: 6px 14px; border: 1px solid var(--line); border-radius: 18px; color: var(--sand); text-decoration: none; font-size: 15px; }
+h1 { font: 700 clamp(48px, 12vw, 76px)/1.3 'Ruqaa', serif; color: #ead9b8; margin-top: 28px; }
+html[lang="en"] h1 { font: 600 clamp(38px, 9vw, 56px)/1.15 'Plex', sans-serif; letter-spacing: -1px; }
+.lead { color: var(--muted); margin-top: 10px; }
+ol { list-style: none; margin-top: 32px; display: grid; gap: 14px; }
+li { display: flex; gap: 16px; padding: 22px; border-radius: 18px; background: var(--panel); border: 1px solid var(--line); }
+.n { flex: none; width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; background: rgba(200,119,74,.18); color: var(--amber); font-weight: 600; font-size: 20px; }
+li h2 { font-size: 19px; font-weight: 600; color: var(--bright); line-height: 1.5; padding-top: 7px; }
+li p { color: var(--muted); font-size: 16px; }
+.btn { display: inline-flex; margin-top: 14px; padding: 11px 22px; border-radius: 30px; font-weight: 600; text-decoration: none; background: var(--terracotta); color: #fff; }
+.btn:hover { background: var(--focus); }
+.note { color: var(--faint); font-size: 15px; margin-top: 22px; }
+.help { margin-top: 30px; padding: 20px 22px; border-radius: 18px; border: 1px solid var(--line); }
+.help p { color: var(--muted); font-size: 16px; }
+.tg { display: flex; align-items: center; gap: 10px; margin-top: 10px; color: var(--bright); text-decoration: none; font-weight: 600; line-height: 1.45; }
+.tg span:not(.join) { flex: 1; min-width: 0; }
+.tg svg { width: 24px; height: 24px; flex: none; }
+.tg .join { background: #229ED9; color: #fff; font-size: 13px; padding: 3px 12px; border-radius: 999px; flex: none; white-space: nowrap; }
+footer { color: var(--faint); font-size: 14px; padding: 48px 0 32px; }
+footer a { color: inherit; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top"><a class="mark" href="/en/"><img src="/assets/icon-128.png" alt=""><span>سكينة</span></a><a class="lang" href="/android/" hreflang="ar">العربية</a></header>
+<main>
+<h1>Sakinah on your phone</h1>
+<p class="lead">The Android beta, in three steps. Free, no ads, nothing to sign up for.</p>
+<ol><li><span class="n">1</span><div><h2>Join Sakinah Friends</h2><p>Open to everyone.</p><a class="btn" href="https://groups.google.com/g/sakinah-friends" target="_blank" rel="noopener">Open the group</a></div></li><li><span class="n">2</span><div><h2>Join the test on Google Play</h2><a class="btn" href="https://play.google.com/apps/testing/com.jazary.sakinah" target="_blank" rel="noopener">Open the test page</a></div></li><li><span class="n">3</span><div><h2>Install Sakinah</h2><a class="btn" href="https://play.google.com/store/apps/details?id=com.jazary.sakinah" target="_blank" rel="noopener">Install from Google Play</a></div></li></ol>
+<p class="note">Use the same Google account as your phone for all three steps. If Sakinah doesn’t show up in step 2 or 3, wait a few minutes and try again.</p>
+<div class="help"><p>Stuck on a step? Ask us on Telegram, in Arabic or English.</p><a class="tg" href="https://t.me/+6Oe7TwwSZtdlMWJk" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#229ED9"/><path fill="#fff" d="M5.4 11.7l11.3-4.4c.5-.2 1 .1.8.9l-1.9 9c-.1.6-.5.8-1 .5l-2.9-2.1-1.4 1.3c-.2.2-.3.3-.6.3l.2-3 5.4-4.9c.2-.2 0-.3-.3-.1l-6.7 4.2-2.9-.9c-.6-.2-.6-.6.1-.9z"/></svg><span>Follow Sakinah’s build on Telegram</span><span class="join">Join</span></a></div>
+</main>
+<footer><a href="/en/">sakinah.jazary.com</a> · <a href="mailto:sakinah@jazary.com">sakinah@jazary.com</a></footer>
+</div>
+</body>
+</html>
